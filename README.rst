@@ -1,7 +1,7 @@
-#siphotonics
+siphotonics
 -----------
 
-##USAGE:
+USAGE:
 
     >>> siphotonics.neff(500,  1550, "te1")
     >>> siphotonics.neff(500,  1550, "tM0")
