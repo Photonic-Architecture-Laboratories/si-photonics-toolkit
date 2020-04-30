@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: siphotonics
+Version: 1.1
+Summary: Silicon Photonics Development Package
+Home-page: UNKNOWN
+Author: Aycan Deniz Vit
+Author-email: avit16@ku.edu.tr
+License: UNKNOWN
+Description: ...
+Keywords: silicon photonics optics waveguide
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Physics

@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.py
+neff_pol/__init__.py
+neff_pol/neff_pol.py
+siphotonics.egg-info/PKG-INFO
+siphotonics.egg-info/SOURCES.txt
+siphotonics.egg-info/dependency_links.txt
+siphotonics.egg-info/not-zip-safe
+siphotonics.egg-info/requires.txt
+siphotonics.egg-info/top_level.txt
