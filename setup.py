@@ -16,7 +16,7 @@ setup(
         "Topic :: Scientific/Engineering :: Physics",
     ],
     keywords="silicon photonics optics waveguide",
-    url="",
+    url="https://github.com/aycandv/siphotonics",
     author="Aycan Deniz Vit",
     author_email="avit16@ku.edu.tr",
     packages=["siphotonics"],
