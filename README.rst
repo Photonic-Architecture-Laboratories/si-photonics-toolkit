@@ -1,7 +1,7 @@
 siphotonics
 ===========
 
-Guide for Local Usage
+Guide for Local Installation
 =====================
 
 Windows Users
@@ -22,7 +22,7 @@ Linux Users
 * Type ``pip install .``
 * Done.
 
-Guide of Functions:
+Usage:
 ======
 
     >>> siphotonics.neff(500,  1550, "te1")
