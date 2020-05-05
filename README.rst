@@ -1,7 +1,29 @@
 siphotonics
------------
+===========
 
-USAGE:
+Guide for Local Installation
+=====================
+
+Windows Users
+-------------
+
+* Make sure you download Python with adding it to PATH at download step.
+* Control if "pip" is installed or not by typing ``pip -V``.
+
+    * If "pip" is not installed, type ``python get-pip.py``.
+    
+* Go to the directory where you clone this repo.
+* Type ``pip install .``
+* Done.
+
+Linux Users
+-----------
+* Go to the directory where you clone this repo.
+* Type ``pip install .``
+* Done.
+
+Usage:
+======
 
 ### Effective Index Values of First Five Modes
 ----------------------------------------------
