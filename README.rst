@@ -25,7 +25,7 @@ Linux Users
 Usage:
 ======
 
-### Effective Index Values of First Five Modes
+Effective Index Values of First Five Modes
 ----------------------------------------------
     >>> siphotonics.neff(500,  1550, "te1")
     >>> siphotonics.neff(500,  1550, "tM0")
@@ -35,7 +35,7 @@ Usage:
                           ^      ^      ^
                        width  wavelng  mode
 ==========================================================
-### Polarization Fraction of First Five Modes
+Polarization Fraction of First Five Modes
 ---------------------------------------------
     >>> siphotonics.polarization_frac(500,  1550, "tm1")
     >>> siphotonics.polarization_frac(500,  1550, "tE0")
@@ -45,7 +45,7 @@ Usage:
                                        ^      ^      ^
                                     width  wavelng  mode
 ==========================================================
-### Permittivity of Si & SiO2
+Permittivity of Si & SiO2
 -----------------------------
     >>> siphotonics.perm_si(1550)
     >>> siphotonics.perm_oxide(1550)
