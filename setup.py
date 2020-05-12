@@ -32,6 +32,5 @@ setup(
         'h5py',
         'scipy',
     ],
-    #scripts=['bin/funniest-joke'],
     include_package_data=True,
     zip_safe=False)
