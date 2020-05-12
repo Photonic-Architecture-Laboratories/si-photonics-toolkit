@@ -1,4 +1,6 @@
 from setuptools import setup
+import setuptools
+
 
 def readme():
     with open("README.rst") as f:
@@ -6,10 +8,14 @@ def readme():
 
 setup(
     name="siphotonics",
-    version="1.1",
+    version=setuptools.__version__,
     description="Silicon Photonics Development Package",
-    long_description="...",
+    long_description=readme(),
+    entry_points = {
+        'console_scripts': ['siphotonics=siphotonics.command_line:main'],
+    },
     classifiers=[
+        "License :: OSI Approved :: MIT License",
         "Intended Audience :: Developers",
         "Natural Language :: English",
         "Programming Language :: Python :: 3",
@@ -19,7 +25,8 @@ setup(
     url="https://github.com/aycandv/siphotonics",
     author="Aycan Deniz Vit",
     author_email="avit16@ku.edu.tr",
-    packages=["siphotonics"],
+    license="MIT",
+    packages=setuptools.find_packages(),
     install_requires=[
         'numpy',
         'h5py',
