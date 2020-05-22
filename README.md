@@ -1,8 +1,20 @@
-siphotonics
-===========
+# siphotonics
 
-Guide for Local Installation
-=====================
+**siphotonics** is a package to provide fundamental features of a SOI platform with high accuracy and small running time.
+
+# Guide for Local Installation
+
+Google Colab Users (for Laboratory)
+-----------------------------------
+If you want to work with Colab, you only need to insert the code fragment below in your notebook to use **siphotonics**:
+
+```python
+from google.colab import drive
+drive.mount('/content/gdrive')
+import os
+os.chdir('/content/gdrive/Shared drives/PAL Drive/Software/SiPhotonicsPython/siphotonics')
+!pip install .
+```
 
 Windows Users
 -------------
@@ -10,7 +22,7 @@ Windows Users
 * Make sure you download Python with adding it to PATH at download step.
 * Control if "pip" is installed or not by typing ``pip -V``.
 
-    * If "pip" is not installed, type ``python get-pip.py``.
+    * If "pip" is not installed, download [pip.py](https://pypi.org/project/pip/), then type ``python get-pip.py``.
     
 * Go to the directory where you clone this repo.
 * Type ``pip install .``
@@ -22,8 +34,8 @@ Linux Users
 * Type ``pip install .``
 * Done.
 
-Usage:
-======
+# Usage:
+
 
 Effective Index Values of First Five Modes
 ----------------------------------------------
