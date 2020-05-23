@@ -2,6 +2,8 @@
 
 **siphotonics** is a package to provide fundamental features of a SOI platform with high accuracy and small running time.
 
+* There are sample codes for the package in a folder which is named as **Example Notebooks** in github repository and Google Drive folder.
+
 # Guide for Local Installation
 
 Google Colab Users (for Laboratory)
