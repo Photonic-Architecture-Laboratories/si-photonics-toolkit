@@ -1,5 +1,5 @@
 MANIFEST.in
-README.rst
+README.md
 setup.py
 siphotonics/__init__.py
 siphotonics/command_line.py

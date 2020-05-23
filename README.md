@@ -12,9 +12,10 @@ If you want to work with Colab, you only need to insert the code fragment below 
 from google.colab import drive
 drive.mount('/content/gdrive')
 import os
-os.chdir('/content/gdrive/Shared drives/PAL Drive/Software/SiPhotonicsPython/siphotonics')
+os.chdir('/content/gdrive/Shared drives/PAL Drive/Software/SiPhotonics Python/siphotonics v0.1')
 !pip install .
 ```
+* Notice that we type *siphotonics v0.1* at the en of the ``chdir`` command, because we use the packege v0.1. If you encounter with any errors, go to the *SiPhotonics Python* directory and check the latest version number.
 
 Windows Users
 -------------

@@ -1,16 +1,28 @@
 Metadata-Version: 1.1
 Name: siphotonics
-Version: 41.2.0
+Version: 0.1
 Summary: Silicon Photonics Development Package
 Home-page: https://github.com/aycandv/siphotonics
 Author: Aycan Deniz Vit
 Author-email: avit16@ku.edu.tr
 License: MIT
-Description: siphotonics
-        ===========
+Description: # siphotonics
         
-        Guide for Local Installation
-        =====================
+        **siphotonics** is a package to provide fundamental features of a SOI platform with high accuracy and small running time.
+        
+        # Guide for Local Installation
+        
+        Google Colab Users (for Laboratory)
+        -----------------------------------
+        If you want to work with Colab, you only need to insert the code fragment below in your notebook to use **siphotonics**:
+        
+        ```python
+        from google.colab import drive
+        drive.mount('/content/gdrive')
+        import os
+        os.chdir('/content/gdrive/Shared drives/PAL Drive/Software/SiPhotonicsPython/siphotonics')
+        !pip install .
+        ```
         
         Windows Users
         -------------
@@ -18,7 +30,7 @@ Description: siphotonics
         * Make sure you download Python with adding it to PATH at download step.
         * Control if "pip" is installed or not by typing ``pip -V``.
         
-            * If "pip" is not installed, type ``python get-pip.py``.
+            * If "pip" is not installed, download [pip.py](https://pypi.org/project/pip/), then type ``python get-pip.py``.
             
         * Go to the directory where you clone this repo.
         * Type ``pip install .``
@@ -30,8 +42,8 @@ Description: siphotonics
         * Type ``pip install .``
         * Done.
         
-        Usage:
-        ======
+        # Usage:
+        
         
         Effective Index Values of First Five Modes
         ----------------------------------------------
@@ -42,7 +54,7 @@ Description: siphotonics
             >>> siphotonics.neff(500,  1550,     2)
                                   ^      ^      ^
                                width  wavelng  mode
-        ==========================================================
+        
         Polarization Fraction of First Five Modes
         ---------------------------------------------
             >>> siphotonics.polarization_frac(500,  1550, "tm1")
@@ -52,14 +64,14 @@ Description: siphotonics
             >>> siphotonics.polarization_frac(500,  1550,     5)
                                                ^      ^      ^
                                             width  wavelng  mode
-        ==========================================================
+        
         Permittivity of Si & SiO2
         -----------------------------
             >>> siphotonics.perm_si(1550)
             >>> siphotonics.perm_oxide(1550)
                                         ^
                                     wavelength
-        ==========================================================
+        
 Keywords: silicon photonics optics waveguide
 Platform: UNKNOWN
 Classifier: License :: OSI Approved :: MIT License

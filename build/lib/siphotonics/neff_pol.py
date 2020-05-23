@@ -25,12 +25,11 @@ for i in range(5):
 os.chdir(user_dir)
 
 def neff(width, wavelength, te_or_tm):
-    if not (width >= 300 and width <= 700):
-            raise ValueError("Width must be between 300-700")
+    if not (width >= 250 and width <= 700):
+            raise ValueError("Width must be between 250-700")
     if not (wavelength >=1200 and wavelength <= 1700):
             raise ValueError("Wavelength must be between 1200-1700")
             
-    ## FOR MODE NUMBER AS STR ("TE0")
     if isinstance(te_or_tm, str):
 
         if te_or_tm[0:2] == "te":
@@ -98,8 +97,8 @@ def neff(width, wavelength, te_or_tm):
 
 def polarization_frac(width, wavelength, te_or_tm):
 
-    if not (width >= 300 and width <= 700):
-            raise ValueError("Width must be between 300-700")
+    if not (width >= 250 and width <= 700):
+            raise ValueError("Width must be between 250-700")
     if not (wavelength >=1200 and wavelength <= 1700):
             raise ValueError("Wavelength must be between 1200-1700")
 
