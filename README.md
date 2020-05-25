@@ -17,7 +17,7 @@ import os
 os.chdir('/content/gdrive/Shared drives/PAL Drive/Software/SiPhotonics Python/siphotonics v0.1')
 !pip install .
 ```
-* Notice that we type *siphotonics v0.1* at the en of the ``chdir`` command, because we use the packege v0.1. If you encounter with any errors, go to the *SiPhotonics Python* directory and check the latest version number.
+* Notice *siphotonics v0.1* at the end of the ``chdir`` command. If you encounter any errors, go to the *SiPhotonics Python* directory and check the latest version number. Other/external users will need to modify the directory name and path depending on where they place the siphotonics package.
 
 Windows Users
 -------------
