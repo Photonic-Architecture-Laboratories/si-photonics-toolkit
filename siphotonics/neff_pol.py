@@ -24,10 +24,11 @@ for i in range(5):
 
 os.chdir(user_dir)
 
-def neff(width, wavelength, te_or_tm):
+def neff(Width, wavelength, te_or_tm):
+    width = Width * 1000
     wavelength_nm = wavelength * 1000
     if not (width >= 250 and width <= 700):
-            raise ValueError("Width must be between 250-700 nm")
+            raise ValueError("Width must be between 0.25-0.7 micron")
     if not (wavelength_nm >= 1200 and wavelength_nm <= 1700):
             raise ValueError("wavelength must be between 1.2-1.7 micron")
             
@@ -96,10 +97,11 @@ def neff(width, wavelength, te_or_tm):
         else:
             return F[4](wavelength_nm, width)[0]
 
-def polarization_frac(width, wavelength, te_or_tm):
+def polarization_frac(Width, wavelength, te_or_tm):
+    width = Width * 1000
     wavelength_nm = wavelength * 1000
     if not (width >= 250 and width <= 700):
-            raise ValueError("Width must be between 250-700")
+            raise ValueError("Width must be between 0.25-0.7 micron")
     if not (wavelength_nm >=1200 and wavelength_nm <= 1700):
             raise ValueError("wavelength must be between 1.2-1.7 micron")
 
