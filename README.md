@@ -2,7 +2,7 @@
 
 **siphotonics** is a package to provide fundamental parameters to aid in the design of silicon photonic components on an SOI platform with high accuracy in extremely fast runtime.
 
-* There are sample codes for the package in a folder which is named as **Example Notebooks** in github repository and Google Drive folder.
+* There are sample codes for the package in the **Example Notebooks** folder.
 
 # Guide for Local Installation
 
