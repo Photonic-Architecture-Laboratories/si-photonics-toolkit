@@ -14,10 +14,9 @@ If you want to work with Colab, you only need to insert the code fragment below 
 from google.colab import drive
 drive.mount('/content/gdrive')
 import os
-os.chdir('/content/gdrive/Shared drives/PAL Drive/Software/SiPhotonics Python/siphotonics v0.1')
+os.chdir('/content/gdrive/Shared drives/PAL Drive/Software/SiPhotonics Python/siphotonics')
 !pip install .
 ```
-* Notice *siphotonics v0.1* at the end of the ``chdir`` command. If you encounter any errors, go to the *SiPhotonics Python* directory and check the latest version number. Other/external users will need to modify the directory name and path depending on where they place the siphotonics package.
 
 Windows Users
 -------------
@@ -42,27 +41,27 @@ Linux Users
 
 Effective Index Values of First Five Modes
 ----------------------------------------------
-    >>> siphotonics.neff(500,  1550, "te1")
-    >>> siphotonics.neff(500,  1550, "tM0")
-    >>> siphotonics.neff(500,  1550, "TE1")
-    >>> siphotonics.neff(500,  1550,     1)
-    >>> siphotonics.neff(500,  1550,     2)
+    >>> siphotonics.neff(0.5,  1.55, "te1")
+    >>> siphotonics.neff(0.5,  1.55, "tM0")
+    >>> siphotonics.neff(0.5,  1.55, "TE1")
+    >>> siphotonics.neff(0.5,  1.55,     1)
+    >>> siphotonics.neff(0.5,  1.55,     2)
                           ^      ^      ^
                        width  wavelng  mode
 
 Polarization Fraction of First Five Modes
 ---------------------------------------------
-    >>> siphotonics.polarization_frac(500,  1550, "tm1")
-    >>> siphotonics.polarization_frac(500,  1550, "tE0")
-    >>> siphotonics.polarization_frac(500,  1550, "Te1")
-    >>> siphotonics.polarization_frac(500,  1550,     1)
-    >>> siphotonics.polarization_frac(500,  1550,     5)
+    >>> siphotonics.polarization_frac(0.5,  1.55, "tm1")
+    >>> siphotonics.polarization_frac(0.5,  1.55, "tE0")
+    >>> siphotonics.polarization_frac(0.5,  1.55, "Te1")
+    >>> siphotonics.polarization_frac(0.5,  1.55,     1)
+    >>> siphotonics.polarization_frac(0.5,  1.55,     5)
                                        ^      ^      ^
                                     width  wavelng  mode
 
 Permittivity of Si & SiO2
 -----------------------------
-    >>> siphotonics.perm_si(1550)
-    >>> siphotonics.perm_oxide(1550)
+    >>> siphotonics.perm_si(1.55)
+    >>> siphotonics.perm_oxide(1.55)
                                 ^
                             wavelength

@@ -9,14 +9,14 @@ os.chdir(user_dir)
 
 
 def perm_si(wavelength):
-    if not (wavelength >=1200 and wavelength <= 1700):
-        raise ValueError("Wavelength must be between 1200-1700")
+    if not (wavelength >=1.2 and wavelength <= 1.7):
+        raise ValueError("Wavelength must be between 1.2-1.7 micron")
     
-    return perm["Si"](wavelength)
+    return perm["Si"](wavelength * 1000)
 
 def perm_oxide(wavelength):
-    if not (wavelength >=1200 and wavelength <= 1700):
-        raise ValueError("Wavelength must be between 1200-1700")
+    if not (wavelength >=1.2 and wavelength <= 1.7):
+        raise ValueError("Wavelength must be between 1.2-1.7 micron")
     
-    return perm["SiO2"](wavelength)
+    return perm["SiO2"](wavelength * 1000)
     
