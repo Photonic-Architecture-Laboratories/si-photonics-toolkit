@@ -1,6 +1,6 @@
 # siphotonics
 
-**siphotonics** is a package that provides fundamental waveguide and material parameters to aid in the design of silicon photonic components on an SOI platform with high accuracy and extremely fast runtime.
+**siphotonics** is a package that provides fundamental waveguide and material parameters to aid in the design of silicon photonic components on SOI platforms with high accuracy and extremely fast runtime.
 
 * There are sample codes for the package in the **Example Notebooks** folder.
 
