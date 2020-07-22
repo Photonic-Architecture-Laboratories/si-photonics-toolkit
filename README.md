@@ -65,3 +65,9 @@ Permittivity of Si & SiO2
     >>> siphotonics.perm_oxide(1.55)
                                 ^
                             wavelength
+
+Coupling Coefficient Between Two Waveguides
+-----------------------------
+    >>> siphotonics.couplingCoefficient(0.5, 0.5, 0.2, 1.55)
+                                        ^     ^    ^     ^ 
+                                    width1 width2 gap  wavelength

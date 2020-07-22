@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: siphotonics
-Version: 0.2.0
+Version: 0.3.0
 Summary: Silicon Photonics Development Package
 Home-page: https://github.com/aycandv/siphotonics
 Author: Aycan Deniz Vit
@@ -8,7 +8,7 @@ Author-email: avit16@ku.edu.tr
 License: MIT
 Description: # siphotonics
         
-        **siphotonics** is a package to provide fundamental parameters to aid in the design of silicon photonic components on an SOI platform with high accuracy in extremely fast runtime.
+        **siphotonics** is a package that provides fundamental waveguide and material parameters to aid in the design of silicon photonic components on SOI platforms with high accuracy and extremely fast runtime.
         
         * There are sample codes for the package in the **Example Notebooks** folder.
         
