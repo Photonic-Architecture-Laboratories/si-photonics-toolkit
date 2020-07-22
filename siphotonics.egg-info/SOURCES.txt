@@ -3,6 +3,7 @@ README.md
 setup.py
 siphotonics/__init__.py
 siphotonics/command_line.py
+siphotonics/couplingc.py
 siphotonics/neff_pol.py
 siphotonics/permittivity.py
 siphotonics.egg-info/PKG-INFO
@@ -12,5 +13,6 @@ siphotonics.egg-info/entry_points.txt
 siphotonics.egg-info/not-zip-safe
 siphotonics.egg-info/requires.txt
 siphotonics.egg-info/top_level.txt
+siphotonics/data/coupling_coefficient_TE0-TE0.pickle
 siphotonics/data/neff_pol.pickle
 siphotonics/data/permittivity.pickle

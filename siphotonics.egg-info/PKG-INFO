@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: siphotonics
-Version: 0.1.2
+Version: 0.2.0
 Summary: Silicon Photonics Development Package
 Home-page: https://github.com/aycandv/siphotonics
 Author: Aycan Deniz Vit
@@ -10,7 +10,7 @@ Description: # siphotonics
         
         **siphotonics** is a package to provide fundamental parameters to aid in the design of silicon photonic components on an SOI platform with high accuracy in extremely fast runtime.
         
-        * There are sample codes for the package in a folder which is named as **Example Notebooks** in github repository and Google Drive folder.
+        * There are sample codes for the package in the **Example Notebooks** folder.
         
         # Guide for Local Installation
         
@@ -49,28 +49,28 @@ Description: # siphotonics
         
         Effective Index Values of First Five Modes
         ----------------------------------------------
-            >>> siphotonics.neff(500,  1550, "te1")
-            >>> siphotonics.neff(500,  1550, "tM0")
-            >>> siphotonics.neff(500,  1550, "TE1")
-            >>> siphotonics.neff(500,  1550,     1)
-            >>> siphotonics.neff(500,  1550,     2)
+            >>> siphotonics.neff(0.5,  1.55, "te1")
+            >>> siphotonics.neff(0.5,  1.55, "tM0")
+            >>> siphotonics.neff(0.5,  1.55, "TE1")
+            >>> siphotonics.neff(0.5,  1.55,     1)
+            >>> siphotonics.neff(0.5,  1.55,     2)
                                   ^      ^      ^
                                width  wavelng  mode
         
         Polarization Fraction of First Five Modes
         ---------------------------------------------
-            >>> siphotonics.polarization_frac(500,  1550, "tm1")
-            >>> siphotonics.polarization_frac(500,  1550, "tE0")
-            >>> siphotonics.polarization_frac(500,  1550, "Te1")
-            >>> siphotonics.polarization_frac(500,  1550,     1)
-            >>> siphotonics.polarization_frac(500,  1550,     5)
+            >>> siphotonics.polarization_frac(0.5,  1.55, "tm1")
+            >>> siphotonics.polarization_frac(0.5,  1.55, "tE0")
+            >>> siphotonics.polarization_frac(0.5,  1.55, "Te1")
+            >>> siphotonics.polarization_frac(0.5,  1.55,     1)
+            >>> siphotonics.polarization_frac(0.5,  1.55,     5)
                                                ^      ^      ^
                                             width  wavelng  mode
         
         Permittivity of Si & SiO2
         -----------------------------
-            >>> siphotonics.perm_si(1550)
-            >>> siphotonics.perm_oxide(1550)
+            >>> siphotonics.perm_si(1.55)
+            >>> siphotonics.perm_oxide(1.55)
                                         ^
                                     wavelength
         
