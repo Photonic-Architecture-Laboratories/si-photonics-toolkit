@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: siphotonics
-Version: 0.3.0
+Version: 0.4.0
 Summary: Silicon Photonics Development Package
 Home-page: https://github.com/aycandv/siphotonics
 Author: Aycan Deniz Vit
@@ -73,6 +73,12 @@ Description: # siphotonics
             >>> siphotonics.perm_oxide(1.55)
                                         ^
                                     wavelength
+        
+        Coupling Coefficient Between Two Waveguides
+        -----------------------------
+            >>> siphotonics.couplingCoefficient(0.5, 0.5, 0.2, 1.55)
+                                                ^     ^    ^     ^ 
+                                            width1 width2 gap  wavelength
         
 Keywords: silicon photonics optics waveguide
 Platform: UNKNOWN
