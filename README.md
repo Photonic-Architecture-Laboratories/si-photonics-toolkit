@@ -15,7 +15,7 @@ from google.colab import drive
 drive.mount('/content/gdrive')
 import os
 os.chdir('/content/gdrive/Shared drives/PAL Drive/Software/SiPhotonics Python/siphotonics')
-!pip install .
+import siphotonics as sip
 ```
 
 Windows Users
