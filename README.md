@@ -49,6 +49,12 @@ Effective Index Values of First Five Modes
                           ^      ^      ^
                        width  wavelng  mode
 
+Group Index 
+----------------------------------------------
+    >>> siphotonics.ng(0.5,  1.55)
+                        ^      ^
+                     width  wavelength
+
 Polarization Fraction of First Five Modes
 ---------------------------------------------
     >>> siphotonics.polarization_frac(0.5,  1.55, "tm1")
