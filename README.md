@@ -77,3 +77,10 @@ Coupling Coefficient Between Two Waveguides
     >>> siphotonics.couplingCoefficient(0.5, 0.5, 0.2, 1.55)
                                         ^     ^    ^     ^ 
                                     width1 width2 gap  wavelength
+Derivative of an Array
+-----------------------------
+    >>> siphotonics.derivative(data, order, step)
+    
+* **data**: Array-based data structure
+* **order**: Order of the derivative. It could be any integer from 1 to 5. It is assigned as "1" unless it is specified.
+* **step**: Step size between indices of "data". For example, step size of the array `np.linspace(0, 2, 100)` equals 2/100. 

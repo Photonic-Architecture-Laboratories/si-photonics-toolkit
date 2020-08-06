@@ -4,3 +4,4 @@ from siphotonics.permittivity import perm_si
 from siphotonics.permittivity import perm_oxide
 from siphotonics.couplingc import couplingCoefficient
 from siphotonics.group_index import ng
+from siphotonics.derivative import derivative

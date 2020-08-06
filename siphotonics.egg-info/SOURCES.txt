@@ -4,6 +4,7 @@ setup.py
 siphotonics/__init__.py
 siphotonics/command_line.py
 siphotonics/couplingc.py
+siphotonics/derivative.py
 siphotonics/group_index.py
 siphotonics/neff_pol.py
 siphotonics/permittivity.py

@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: siphotonics
-Version: 0.4.0
+Version: 0.5.0
 Summary: Silicon Photonics Development Package
 Home-page: https://github.com/aycandv/siphotonics
 Author: Aycan Deniz Vit
@@ -23,7 +23,7 @@ Description: # siphotonics
         drive.mount('/content/gdrive')
         import os
         os.chdir('/content/gdrive/Shared drives/PAL Drive/Software/SiPhotonics Python/siphotonics')
-        !pip install .
+        import siphotonics as sip
         ```
         
         Windows Users
@@ -57,6 +57,12 @@ Description: # siphotonics
                                   ^      ^      ^
                                width  wavelng  mode
         
+        Group Index 
+        ----------------------------------------------
+            >>> siphotonics.ng(0.5,  1.55)
+                                ^      ^
+                             width  wavelength
+        
         Polarization Fraction of First Five Modes
         ---------------------------------------------
             >>> siphotonics.polarization_frac(0.5,  1.55, "tm1")
@@ -79,6 +85,13 @@ Description: # siphotonics
             >>> siphotonics.couplingCoefficient(0.5, 0.5, 0.2, 1.55)
                                                 ^     ^    ^     ^ 
                                             width1 width2 gap  wavelength
+        Derivative of an Array
+        -----------------------------
+            >>> siphotonics.derivative(data, order, step)
+            
+        * **data**: Array-based data structure
+        * **order**: Order of the derivative. It could be any integer from 1 to 5. It is assigned as "1" unless it is specified.
+        * **step**: Step size between indices of "data". For example, step size of the array `np.linspace(0, 2, 100)` equals 2/100. 
         
 Keywords: silicon photonics optics waveguide
 Platform: UNKNOWN
