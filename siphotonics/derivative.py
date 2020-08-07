@@ -3,17 +3,17 @@ import numpy as np
 def derivative(f, order=1, step=1):
     if order == 1:
         first_der = np.zeros(len(f))
-        first_der[0] = (-3*f[0] + 4*f[1] - 1*f[2]) / 2
-        first_der[1] = (-2*f[0] - 3*f[1] + 6*f[2] - 1*f[3]) / 6
-        first_der[-1] = (1*f[-3] - 4*f[-2] + 3*f[-1]) / 2
-        first_der[-2] = (1*f[-4] - 6*f[-3] + 3*f[-2] + 2*f[-1]) / 6
+        first_der[0] = (f[1] - f[0]) / 1
+        first_der[1] = (-1*f[0] + 1*f[2]) / 2
+        first_der[-1] = (f[-1] - f[-2]) / 1
+        first_der[-2] = (-1*f[-3] + 1*f[-1]) / 2
         for i in range(2,len(f)-2,1):
             first_der[i] = (1*f[i - 2] - 8*f[i - 1] + 8*f[i + 1] - 1*f[i + 2]) / 12
         return first_der/step
     elif order == 2:
         second_der = np.zeros(len(f))
         second_der[0] = (1*f[0] - 2*f[1] + 1*f[2]) / 1
-        second_der[1] = (1*f[0] - 2*f[1] + 1*f[2] - 0*f[3]) / 1
+        second_der[1] = (2*f[0] - 5*f[1] + 4*f[2] - 1*f[3]) / 1
         second_der[-1] = (1*f[-3] - 2*f[-2] + 1*f[-1]) / 1
         second_der[-2] = (0*f[-4] + 1*f[-3] - 2*f[-2] + 1*f[-1]) / 1
         for i in range(2,len(f)-2,1):
