@@ -91,7 +91,6 @@ def plot_power_output(transfer_matrix, wavelength, device_length, kind="frequenc
         plt.xlabel("Wavelength ($\mu{m}$)")
     
         plt.ylabel("Power Ratio")   
-        plt.yticks(np.arange(0, 1.01, step=0.1))
         plt.legend()
         plt.grid()
     plt.show()
