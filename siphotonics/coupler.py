@@ -45,7 +45,7 @@ def transfer_matrix(width1, width2, gap, wavelength, L, dz):
     return tm_current
 
 
-def plot_power_output(transfer_matrix, wavelength, device_length, kind="device_length"):
+def plot_power_output(transfer_matrix, wavelength, device_length, kind="frequency_sweep"):
     plt.rcParams['figure.figsize'] = [11, 6]
     plt.rcParams.update({'font.size': 11})
 
