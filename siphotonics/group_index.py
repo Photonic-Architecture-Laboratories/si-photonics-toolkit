@@ -25,23 +25,6 @@ def ng(width, wavelength):
 
     if wavelength == 1.7:
         n_g = sip.neff(width, wavelength,1) - wavelength * (sip.neff(width, wavelength,1) - sip.neff(width, wavelength-0.001,1))/(0.001)
-        #n_g = sip.neff(width, wavelength,1) - wavelength * difference[int((wavelength-1.2)*1000/5)]
     else:
         n_g = sip.neff(width, wavelength,1) - wavelength * (sip.neff(width, wavelength+0.001,1) - sip.neff(width, wavelength,1))/(0.001)
-        #n_g = sip.neff(width, wavelength,1) - wavelength * difference[int((wavelength-1.2)*1000/5)]
     return n_g
-
-"""
-print(ng(0.5, 1.55))
-
-group_array = []
-
-wavelengthArr = np.linspace(1.2, 1.69, 501)
-for i in wavelengthArr:
-    group_array.append(ng(0.5,i))
-
-import matplotlib.pyplot as plt 
-
-plt.plot(wavelengthArr, group_array)
-plt.show()
-"""
