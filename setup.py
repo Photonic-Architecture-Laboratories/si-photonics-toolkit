@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name="siphotonics",
-    version = '0.5.0',
+    version = '0.6.0',
     description="Silicon Photonics Development Package",
     long_description=readme(),
     entry_points = {
