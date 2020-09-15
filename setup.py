@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name="siphotonics",
-    version = '0.4.0',
+    version = '0.5.0',
     description="Silicon Photonics Development Package",
     long_description=readme(),
     entry_points = {
@@ -31,6 +31,7 @@ setup(
         'numpy',
         'h5py',
         'scipy',
+        'matplotlib'
     ],
     include_package_data=True,
     zip_safe=False)

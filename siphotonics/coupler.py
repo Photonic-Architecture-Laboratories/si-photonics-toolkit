@@ -11,10 +11,10 @@ def transfer_matrix_dz(width1, width2, gap, wavelength, dz):
 
     transfer_matrix = np.zeros((2,2), dtype=complex)
     transfer_matrix[0][0] = np.cos(beta_0*dz) - 1j * (-1*(beta_2 - beta_1) / (2 * beta_0)) * np.sin(beta_0*dz)
-    transfer_matrix[0][1] = -1j * k12 / beta_0 * np.sin(beta_0*dz)
-    transfer_matrix[1][0] = -1j * k21 / beta_0 * np.sin(beta_0*dz)
+    transfer_matrix[0][1] = +1j * k12 / beta_0 * np.sin(beta_0*dz)
+    transfer_matrix[1][0] = +1j * k21 / beta_0 * np.sin(beta_0*dz)
     transfer_matrix[1][1] = np.cos(beta_0*dz) + 1j * (-1*(beta_2 - beta_1) / (2 * beta_0)) * np.sin(beta_0*dz)
-    return transfer_matrix# * np.exp(-1j*((beta_1+beta_2)/2)*dz)   # not sure about this
+    return transfer_matrix# * np.exp(-1j*((beta_1-beta_2)/2)*dz)   # not sure about this
 
 
 def transfer_matrix(width1, width2, gap, wavelength, L, dz):
