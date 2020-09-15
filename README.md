@@ -74,7 +74,7 @@ Permittivity of Si & SiO2
 
 Coupling Coefficient Between Two Waveguides
 -----------------------------
-    >>> siphotonics.couplingCoefficient(0.5, 0.5, 0.2, 1.55)
+    >>> siphotonics.coupling_coefficient(0.5, 0.5, 0.2, 1.55)
                                         ^     ^    ^     ^ 
                                     width1 width2 gap  wavelength
 Derivative of an Array
