@@ -3,3 +3,5 @@
 *.pyc
 build/*
 siphotonics.egg-info/*
+siphotonics.egg-info
+dist

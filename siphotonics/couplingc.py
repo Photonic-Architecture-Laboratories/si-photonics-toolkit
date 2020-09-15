@@ -17,4 +17,6 @@ points = (width1_array, width2_array, gapArr, wavelengthArray)
 my_interp = RegularGridInterpolator(points, couplingCoefficientArray)
 
 def coupling_coefficient(width1, width2, gap, wavelength):
-    return my_interp([width1*1000,width2*1000,gap*1000,wavelength*1000])
+    if gap>=2:
+        return 0.00001
+    return my_interp([width2*1000,width1*1000,gap*1000,wavelength*1000])[0]
