@@ -3,8 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def transfer_matrix_dz(width1, width2, gap, wavelength, dz):
-    k12 = sip.couplingCoefficient(width1, width2, gap, wavelength)
-    k21 = sip.couplingCoefficient(width2, width1, gap, wavelength)
+    k12 = sip.coupling_coefficient(width1, width2, gap, wavelength)
+    k21 = sip.coupling_coefficient(width2, width1, gap, wavelength)
     beta_1 = 2 * np.pi * sip.neff(width1, wavelength,1) / wavelength
     beta_2 = 2 * np.pi * sip.neff(width2, wavelength,1) / wavelength
     beta_0 = np.sqrt((beta_1/2 - beta_2/2)**2 + k12*k21)
