@@ -11,11 +11,17 @@ Google Colab Users (for Laboratory)
 If you want to work with Colab, you only need to insert the code fragment below in your notebook to use **siphotonics**:
 
 ```python
+!pip install -q -U git+https://github.com/google/trax@master
+
 from google.colab import drive
-drive.mount('/content/gdrive')
 import os
+
+root = os.getcwd()
+drive.mount('/content/gdrive')
 os.chdir('/content/gdrive/Shared drives/PAL Drive/Software/SiPhotonics Python/siphotonics')
+
 import siphotonics as sip
+os.chdir(root)
 ```
 
 Windows Users
