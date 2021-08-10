@@ -18,7 +18,7 @@ eff_ind = np.array(f_neff["neff"], dtype=np.complex128).real
 
 
 @jit
-def fast_neff(width, wavelength, mode=1):
+def neff(width, wavelength, mode=1):
     """
     Gets Effective Index value by using corresponding parameters. This is
     a JAX compatible function. JIT is enabled.
@@ -33,7 +33,7 @@ def fast_neff(width, wavelength, mode=1):
 
 
 @jit
-def grad_neff(width, wl, mode):
+def grad_neff(width, wl, mode=1):
     """
     Gets derivatives of Effective Index with respect to waveguide width and
     wavelength.
@@ -44,4 +44,4 @@ def grad_neff(width, wl, mode):
     with respect to width. Last element is the derivative with respect to
     wavelength
     """
-    return fastmath.grad(fast_neff, (0, 1))(width, wl, mode.astype(float))
+    return fastmath.grad(neff, (0, 1))(width, wl, mode.astype(float))

@@ -24,7 +24,7 @@ for i in range(5):
 
 os.chdir(user_dir)
 
-
+"""
 def neff(width, wavelength, te_or_tm):
     width = width * 1000
     wavelength_nm = wavelength * 1000
@@ -101,6 +101,8 @@ def neff(width, wavelength, te_or_tm):
             return F[3](wavelength_nm, width)[0]
         else:
             return F[4](wavelength_nm, width)[0]
+
+"""
 
 
 def polarization_frac(width, wavelength, te_or_tm):

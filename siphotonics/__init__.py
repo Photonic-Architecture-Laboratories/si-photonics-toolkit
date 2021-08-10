@@ -1,4 +1,5 @@
-from siphotonics.neff_pol import neff
+from siphotonics.trax_neff import neff
+from siphotonics.trax_neff import grad_neff
 from siphotonics.neff_pol import polarization_frac
 from siphotonics.permittivity import perm_si
 from siphotonics.permittivity import perm_oxide
@@ -10,5 +11,3 @@ from siphotonics.coupler import transfer_matrix
 from siphotonics.coupler import transfer_matrix_dz
 from siphotonics.coupler import plot_power_output
 from siphotonics.ring import fsr
-from siphotonics.trax_neff import fast_neff
-from siphotonics.trax_neff import grad_neff
