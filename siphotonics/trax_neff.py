@@ -5,16 +5,31 @@ from trax import fastmath
 from jax import jit
 from jax.scipy import ndimage
 from jax import numpy as jnp
+from jax.config import config
+
+config.update("jax_enable_x64", True)
 
 user_dir = os.getcwd()
 os.chdir(os.path.join(os.path.dirname(__file__), "data"))
 
-f_neff = h5py.File("neff.mat", "r")
+with open('neff_width_240_20_700_wav_1200_0p1_1700.csv') as file:
+    lines = file.readlines()
+
 os.chdir(user_dir)
 
-width_span = jnp.array(f_neff["width_sp"]) * 1e6
-wavelength_span = jnp.array(f_neff["wavelength_span"]) * 1e6
-eff_ind = np.array(f_neff["neff"], dtype=np.complex128).real
+neff_data = jnp.array(list(map(float, lines[1][:-2].split(','))))
+width_data = jnp.array(list(map(float, lines[3][:-2].split(','))))
+wav_data = jnp.array(list(map(float, lines[5][:-2].split(','))))
+
+wav_size = wav_data.shape[0]
+wav_min = np.min(wav_data)
+wav_max = np.max(wav_data)
+
+width_size = width_data.shape[0]
+width_min = np.min(width_data)
+width_max = np.max(width_data)
+
+neff_data = jnp.reshape(neff_data, (wav_size, width_size))
 
 
 @jit
@@ -27,8 +42,9 @@ def neff(width, wavelength, mode=1):
     :param mode: Mode number. (1 - 5)
     :return: Effective Index value(s).
     """
-    return ndimage.map_coordinates(eff_ind,
-                                   [(wavelength - 1.2) * (25 / 0.5), (width - 0.24) * (23 / (0.7 - 0.24))],
+    return ndimage.map_coordinates(neff_data,
+                                   [(wavelength - wav_min) * ((wav_size - 1) / (wav_max - wav_min)),
+                                    (width - width_min) * ((width_size - 1) / (width_max - width_min))],
                                    order=1)
 
 
