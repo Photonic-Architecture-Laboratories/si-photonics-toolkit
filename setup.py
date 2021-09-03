@@ -8,10 +8,10 @@ def readme():
 
 setup(
     name="siphotonics",
-    version = '0.5.0',
+    version='0.7',
     description="Silicon Photonics Development Package",
     long_description=readme(),
-    entry_points = {
+    entry_points={
         'console_scripts': ['siphotonics=siphotonics.command_line:main'],
     },
     classifiers=[
@@ -22,7 +22,7 @@ setup(
         "Topic :: Scientific/Engineering :: Physics",
     ],
     keywords="silicon photonics optics waveguide",
-    url="https://github.com/aycandv/siphotonics",
+    url="",
     author="Aycan Deniz Vit",
     author_email="avit16@ku.edu.tr",
     license="MIT",
