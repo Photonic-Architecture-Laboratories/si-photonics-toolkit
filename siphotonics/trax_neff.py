@@ -11,7 +11,7 @@ config.update("jax_enable_x64", True)
 user_dir = os.getcwd()
 os.chdir(os.path.join(os.path.dirname(__file__), "data"))
 
-with open('neff_width_240_20_700_wav_1200_0p1_1700.csv') as file:
+with open('neff_fitted_Si_fitted_SiO2_width_240_5_700_wav_1200_0p1_1700.csv') as file:
     lines = file.readlines()
 
 os.chdir(user_dir)
