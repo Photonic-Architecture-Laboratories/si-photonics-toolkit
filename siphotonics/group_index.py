@@ -25,8 +25,8 @@ def ng(width, wavelength):
 
     if wavelength == 1.7:
         n_g = sip.neff(width, wavelength, 1) - wavelength * (
-                    sip.neff(width, wavelength, 1) - sip.neff(width, wavelength - 0.001, 1)) / (0.001)
+                    sip.neff(width, wavelength, 1) - sip.neff(width, wavelength - 0.001, 1)) / 0.001
     else:
         n_g = sip.neff(width, wavelength, 1) - wavelength * (
-                    sip.neff(width, wavelength + 0.001, 1) - sip.neff(width, wavelength, 1)) / (0.001)
+                    sip.neff(width, wavelength + 0.001, 1) - sip.neff(width, wavelength, 1)) / 0.001
     return n_g
