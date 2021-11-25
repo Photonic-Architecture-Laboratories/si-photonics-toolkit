@@ -1,5 +1,4 @@
 import os
-from scipy import constants
 import siphotonics as sip
 import numpy as np
 import pickle

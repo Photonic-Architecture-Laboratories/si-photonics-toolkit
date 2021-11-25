@@ -1,5 +1,4 @@
 import pickle
-import time
 import os
 
 user_dir = os.getcwd()
