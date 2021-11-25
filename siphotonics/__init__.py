@@ -5,7 +5,4 @@ from siphotonics.permittivity import perm_si
 from siphotonics.permittivity import perm_oxide
 from siphotonics.group_index import ng
 from siphotonics.derivative import derivative
-from siphotonics.coupler import transfer_matrix
-from siphotonics.coupler import transfer_matrix_dz
-from siphotonics.coupler import plot_power_output
 from siphotonics.ring import fsr
