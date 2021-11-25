@@ -145,3 +145,4 @@ cython_debug/
 
 .idea/*
 .vscode/
+/Example Notebooks/.ipynb_checkpoints/
