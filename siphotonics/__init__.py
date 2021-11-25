@@ -3,8 +3,6 @@ from siphotonics.trax_neff import grad_neff
 from siphotonics.neff_pol import polarization_frac
 from siphotonics.permittivity import perm_si
 from siphotonics.permittivity import perm_oxide
-from siphotonics.couplingc import coupling_coefficient
-from siphotonics.couplingc import through_power
 from siphotonics.group_index import ng
 from siphotonics.derivative import derivative
 from siphotonics.coupler import transfer_matrix
