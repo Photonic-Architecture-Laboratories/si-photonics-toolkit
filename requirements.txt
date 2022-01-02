@@ -1,4 +1,5 @@
 pylint
+isort
 pytest
 click
 black
