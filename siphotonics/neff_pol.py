@@ -1,5 +1,4 @@
 import pickle
-import time
 import os
 
 user_dir = os.getcwd()
@@ -110,7 +109,7 @@ def polarization_frac(width, wavelength, te_or_tm):
     wavelength_nm = wavelength * 1000
     if not (250 <= width <= 700):
         raise ValueError("Width must be between 0.25-0.7 micron")
-    if not (wavelength_nm >= 1200 and wavelength_nm <= 1700):
+    if not (1200 <= wavelength_nm <= 1700):
         raise ValueError("wavelength must be between 1.2-1.7 micron")
 
     if isinstance(te_or_tm, str):
@@ -120,8 +119,8 @@ def polarization_frac(width, wavelength, te_or_tm):
                 if width in pol_te_list[int(te_or_tm[2:3])][wavelength_nm]:
                     return pol_te_list[int(te_or_tm[2:3])][wavelength_nm][width]
         if te_or_tm[0:2] == "tm":
-            if wavelength_nm in pol_tm_list[int(te_or_tm[2:3])] and width in pol_tm_list[int(te_or_tm[2:3])][
-                wavelength_nm]:
+            if wavelength_nm in pol_tm_list[int(te_or_tm[2:3])] and \
+                    width in pol_tm_list[int(te_or_tm[2:3])][wavelength_nm]:
                 return pol_tm_list[int(te_or_tm[2:3])][wavelength_nm][width]
 
         te_or_tm = te_or_tm.lower()
@@ -129,22 +128,22 @@ def polarization_frac(width, wavelength, te_or_tm):
         te_number = 0
         tm_number = 0
 
-        for i in range(len(F)):
-            if F[i](wavelength_nm, width)[0] < 1.44:
-                last_index = i
+        for j in range(len(F)):
+            if F[j](wavelength_nm, width)[0] < 1.44:
+                last_index = j
                 break
-            if P[i](wavelength_nm, width)[0] > 0.5:
+            if P[j](wavelength_nm, width)[0] > 0.5:
                 te_number += 1
-            if P[i](wavelength_nm, width)[0] < 0.5:
+            if P[j](wavelength_nm, width)[0] < 0.5:
                 tm_number += 1
 
         pol_te = []
         pol_tm = []
-        for i in range(last_index):
-            if P[i](wavelength_nm, width)[0] > 0.50:
-                pol_te.append(P[i](wavelength_nm, width)[0])
+        for j in range(last_index):
+            if P[j](wavelength_nm, width)[0] > 0.50:
+                pol_te.append(P[j](wavelength_nm, width)[0])
             else:
-                pol_tm.append(P[i](wavelength_nm, width)[0])
+                pol_tm.append(P[j](wavelength_nm, width)[0])
 
         if te_or_tm[0:2] == "te" and int(te_or_tm[2:3]) < te_number:
             ind = int(te_or_tm[2:3])

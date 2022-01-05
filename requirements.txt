@@ -1,0 +1,7 @@
+pylint
+isort
+pytest
+click
+black
+pytest-cov
+trax

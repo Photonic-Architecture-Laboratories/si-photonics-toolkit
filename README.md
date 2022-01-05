@@ -2,13 +2,12 @@
 
 **siphotonics** is a package that provides fundamental waveguide and material parameters to aid in the design of silicon photonic components on SOI platforms with high accuracy and extremely fast runtime.
 
-* There are sample codes for the package in the **Example Notebooks** folder.
+* For tutorials, see **Example Notebooks** folder.
 
-# Guide for Local Installation
+## Installation
 
-Google Colab Users (for Laboratory)
------------------------------------
-If you want to work with Colab, you only need to insert the code fragment below in your notebook to use **siphotonics**:
+### Colab
+If you use Colab environment, you need to import **siphotonics** using the code snippet below:
 
 ```python
 !pip install -q -U git+https://github.com/google/trax@master
@@ -24,69 +23,44 @@ import siphotonics as sip
 os.chdir(root)
 ```
 
-Windows Users
--------------
-
-* Make sure you download Python with adding it to PATH at download step.
-* Control if "pip" is installed or not by typing ``pip -V``.
-
-    * If "pip" is not installed, download [pip.py](https://pypi.org/project/pip/), then type ``python get-pip.py``.
-    
+### Windows, Linux and macOS
 * Go to the directory where you clone this repo.
-* Type ``pip install .``
+* Execute `pip install .`
 * Done.
 
-Linux Users
------------
-* Go to the directory where you clone this repo.
-* Type ``pip install .``
-* Done.
+## Usage
 
-# Usage:
+### Effective Index
+```python
+sip.neff(width=0.5,  wavelength=1.55)
+sip.neff(width=0.5,  wavelength=1.55)
+```
 
+### Group Index
+```python
+sip.ng(width=0.5,  wavelength=1.55)
+```
 
-Effective Index Values of First Five Modes
-----------------------------------------------
-    >>> siphotonics.neff(0.5,  1.55, "te1")
-    >>> siphotonics.neff(0.5,  1.55, "tM0")
-    >>> siphotonics.neff(0.5,  1.55, "TE1")
-    >>> siphotonics.neff(0.5,  1.55,     1)
-    >>> siphotonics.neff(0.5,  1.55,     2)
-                          ^      ^      ^
-                       width  wavelng  mode
+### Polarization Fraction of First Five Modes
+```python
+sip.polarization_frac(width=0.5,  wavelength=1.55, mode="tm1")
+sip.polarization_frac(width=0.5,  wavelength=1.55, mode="tE0")
+sip.polarization_frac(width=0.5,  wavelength=1.55, mode="Te1")
+sip.polarization_frac(width=0.5,  wavelength=1.55, mode=1)
+sip.polarization_frac(width=0.5,  wavelength=1.55, mode=5)
+```
 
-Group Index 
-----------------------------------------------
-    >>> siphotonics.ng(0.5,  1.55)
-                        ^      ^
-                     width  wavelength
+### Permittivity of Si & SiO2
+```python
+sip.perm_si(wavelength=1.55)
+sip.perm_oxide(wavelength=1.55)
+```
 
-Polarization Fraction of First Five Modes
----------------------------------------------
-    >>> siphotonics.polarization_frac(0.5,  1.55, "tm1")
-    >>> siphotonics.polarization_frac(0.5,  1.55, "tE0")
-    >>> siphotonics.polarization_frac(0.5,  1.55, "Te1")
-    >>> siphotonics.polarization_frac(0.5,  1.55,     1)
-    >>> siphotonics.polarization_frac(0.5,  1.55,     5)
-                                       ^      ^      ^
-                                    width  wavelng  mode
-
-Permittivity of Si & SiO2
------------------------------
-    >>> siphotonics.perm_si(1.55)
-    >>> siphotonics.perm_oxide(1.55)
-                                ^
-                            wavelength
-
-Coupling Coefficient Between Two Waveguides
------------------------------
-    >>> siphotonics.coupling_coefficient(0.5, 0.5, 0.2, 1.55)
-                                        ^     ^    ^     ^ 
-                                    width1 width2 gap  wavelength
-Derivative of an Array
------------------------------
-    >>> siphotonics.derivative(data, order, step)
+### Derivative of an Array
+```python
+sip.derivative(data, order, step)
+```
     
-* **data**: Array-based data structure
-* **order**: Order of the derivative. It could be any integer from 1 to 5. It is assigned as "1" unless it is specified.
+* **data**: Array-like data structure
+* **order**: Order of derivative. Can be an integer from 1 to 5. By default, 1.
 * **step**: Step size between indices of "data". For example, step size of the array `np.linspace(0, 2, 100)` equals 2/100. 
