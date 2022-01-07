@@ -1,0 +1,42 @@
+image: python:3.9
+
+stages:
+  - Setup Environment
+  - Lint
+  - Test
+
+create-venv:
+  stage: Setup
+  only:
+    - master
+    - merge_requests
+  script:
+    - python -V
+    - export PYTHONPATH="$PYTHONPATH:."
+    - pip install virtualenv
+    - virtualenv venv
+    - source venv/bin/activate
+
+install-deps:
+  stage: Setup
+  only:
+    - master
+    - merge_requests
+  script:
+    - make install
+
+format:
+  stage: Lint
+  only:
+    - master
+    - merge_requests
+  script:
+    - make lint
+
+test:
+  stage: Test
+  only:
+    - master
+    - merge_requests
+  script:
+    - make test
