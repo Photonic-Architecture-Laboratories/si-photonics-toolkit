@@ -25,7 +25,7 @@ install-deps:
   script:
     - make install
 
-format:
+format-check:
   stage: Lint
   only:
     - master
