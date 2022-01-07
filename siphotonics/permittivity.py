@@ -1,9 +1,9 @@
-import pickle
 import os
+import pickle
 
 user_dir = os.getcwd()
 os.chdir(os.path.join(os.path.dirname(__file__), "data"))
-with open('permittivity.pickle', 'rb') as handle:
+with open("permittivity.pickle", "rb") as handle:
     perm = pickle.load(handle)
 os.chdir(user_dir)
 

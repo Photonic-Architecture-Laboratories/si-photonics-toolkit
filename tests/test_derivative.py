@@ -3,6 +3,7 @@ import pytest
 
 import siphotonics as sip
 
+
 def test_derivative():
     x = np.linspace(0, 10, 400)
     y = np.cos(2 * np.pi * x)

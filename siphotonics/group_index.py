@@ -1,7 +1,9 @@
 import os
-import siphotonics as sip
-import numpy as np
 import pickle
+
+import numpy as np
+
+import siphotonics as sip
 
 user_dir = os.getcwd()
 os.chdir(os.path.join(os.path.dirname(__file__), "data"))
@@ -24,9 +26,13 @@ def ng(width, wavelength):
         raise ValueError("Width must be between 0.3 and 0.7 microns.")
 
     if wavelength == 1.7:
-        n_g = sip.neff(width, wavelength) - wavelength * (
-                    sip.neff(width, wavelength) - sip.neff(width, wavelength - 0.001)) / 0.001
+        n_g = (
+            sip.neff(width, wavelength)
+            - wavelength * (sip.neff(width, wavelength) - sip.neff(width, wavelength - 0.001)) / 0.001
+        )
     else:
-        n_g = sip.neff(width, wavelength) - wavelength * (
-                    sip.neff(width, wavelength + 0.001) - sip.neff(width, wavelength)) / 0.001
+        n_g = (
+            sip.neff(width, wavelength)
+            - wavelength * (sip.neff(width, wavelength + 0.001) - sip.neff(width, wavelength)) / 0.001
+        )
     return n_g

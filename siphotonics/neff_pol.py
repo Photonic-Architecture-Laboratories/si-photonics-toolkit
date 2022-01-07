@@ -1,5 +1,5 @@
-import pickle
 import os
+import pickle
 
 user_dir = os.getcwd()
 os.chdir(os.path.join(os.path.dirname(__file__), "data"))
@@ -117,8 +117,10 @@ def polarization_frac(width, wavelength, te_or_tm):
                 if width in pol_te_list[int(te_or_tm[2:3])][wavelength_nm]:
                     return pol_te_list[int(te_or_tm[2:3])][wavelength_nm][width]
         if te_or_tm[0:2] == "tm":
-            if wavelength_nm in pol_tm_list[int(te_or_tm[2:3])] and \
-                    width in pol_tm_list[int(te_or_tm[2:3])][wavelength_nm]:
+            if (
+                wavelength_nm in pol_tm_list[int(te_or_tm[2:3])]
+                and width in pol_tm_list[int(te_or_tm[2:3])][wavelength_nm]
+            ):
                 return pol_tm_list[int(te_or_tm[2:3])][wavelength_nm][width]
 
         te_or_tm = te_or_tm.lower()
@@ -151,8 +153,13 @@ def polarization_frac(width, wavelength, te_or_tm):
         else:
             if not te_or_tm[0:2] == "tm":
                 raise ValueError(
-                    "There is no TE" + te_or_tm[2:3] + " for wavelength: " + str(wavelength_nm) + " & Width: " + str(
-                        width))
+                    "There is no TE"
+                    + te_or_tm[2:3]
+                    + " for wavelength: "
+                    + str(wavelength_nm)
+                    + " & Width: "
+                    + str(width)
+                )
 
         if te_or_tm[0:2] == "tm" and int(te_or_tm[2:3]) < tm_number:
             ind = int(te_or_tm[2:3])
@@ -162,8 +169,13 @@ def polarization_frac(width, wavelength, te_or_tm):
         else:
             if not te_or_tm[0:2] == "te":
                 raise ValueError(
-                    "There is no TM" + te_or_tm[2:3] + " for wavelength: " + str(wavelength_nm) + " & Width: " + str(
-                        width))
+                    "There is no TM"
+                    + te_or_tm[2:3]
+                    + " for wavelength: "
+                    + str(wavelength_nm)
+                    + " & Width: "
+                    + str(width)
+                )
 
     if isinstance(te_or_tm, int):
         if not (1 <= te_or_tm <= 5):

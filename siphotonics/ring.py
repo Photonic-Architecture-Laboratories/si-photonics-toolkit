@@ -1,5 +1,6 @@
-import siphotonics as sip
 import numpy as np
+
+import siphotonics as sip
 
 
 def fsr(wavelength, radius, width):
