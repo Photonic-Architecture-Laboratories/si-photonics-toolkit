@@ -1,7 +1,7 @@
 image: python:3.9
 
 stages:
-  - Setup Environment
+  - Setup
   - Lint
   - Test
 
