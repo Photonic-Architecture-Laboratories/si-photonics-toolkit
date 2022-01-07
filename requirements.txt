@@ -3,5 +3,7 @@ isort
 pytest
 click
 black
+autoflake
+pre-commit
 pytest-cov
 trax
