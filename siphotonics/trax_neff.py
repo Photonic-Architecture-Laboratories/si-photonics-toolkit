@@ -197,15 +197,15 @@ def neff_te2(width, wavelength):
 
 
 @jit
-def grad_neff(width, wl, mode=1):
+def grad_neff(width, wavelength, mode=1):
     """
     Gets derivatives of Effective Index with respect to waveguide width and
     wavelength.
     :param width: Waveguide width in microns. (0.25 - 0.7)
-    :param wl: Wavelength in microns. (1.2 - 1.7)
+    :param wavelength: Wavelength in microns. (1.2 - 1.7)
     :param mode: Mode number. (1 - 5)
     :return: A tuple of DeviceArrays. First element corresponds to derivative
     with respect to width. Last element is the derivative with respect to
     wavelength
     """
-    return fastmath.grad(neff, (0, 1))(width, wl, mode.astype(float))
+    return fastmath.grad(neff, (0, 1))(width, wavelength, mode.astype(float))
