@@ -1,40 +1,52 @@
 import numpy as np
 
 
-def derivative(f, order=1, step=1):
+def derivative(func, order=1, step=1):
+    """
+    Derivative of given array-like data structure up to 4th order.
+    :param func:
+    :param order:
+    :param step:
+    :return:
+    """
     if order == 1:
-        first_der = np.zeros(len(f))
-        first_der[0] = (f[1] - f[0]) / 1
-        first_der[1] = (-1 * f[0] + 1 * f[2]) / 2
-        first_der[-1] = (f[-1] - f[-2]) / 1
-        first_der[-2] = (-1 * f[-3] + 1 * f[-1]) / 2
-        for i in range(2, len(f) - 2, 1):
-            first_der[i] = (1 * f[i - 2] - 8 * f[i - 1] + 8 * f[i + 1] - 1 * f[i + 2]) / 12
+        first_der = np.zeros(len(func))
+        first_der[0] = (func[1] - func[0]) / 1
+        first_der[1] = (-1 * func[0] + 1 * func[2]) / 2
+        first_der[-1] = (func[-1] - func[-2]) / 1
+        first_der[-2] = (-1 * func[-3] + 1 * func[-1]) / 2
+        for i in range(2, len(func) - 2, 1):
+            first_der[i] = (1 * func[i - 2] - 8 * func[i - 1] + 8 * func[i + 1] - 1 * func[i + 2]) / 12
         return first_der / step
-    elif order == 2:
-        second_der = np.zeros(len(f))
-        second_der[0] = (1 * f[0] - 2 * f[1] + 1 * f[2]) / 1
-        second_der[1] = (2 * f[0] - 5 * f[1] + 4 * f[2] - 1 * f[3]) / 1
-        second_der[-1] = (1 * f[-3] - 2 * f[-2] + 1 * f[-1]) / 1
-        second_der[-2] = (0 * f[-4] + 1 * f[-3] - 2 * f[-2] + 1 * f[-1]) / 1
-        for i in range(2, len(f) - 2, 1):
-            second_der[i] = (-1 * f[i - 2] + 16 * f[i - 1] - 30 * f[i] + 16 * f[i + 1] - 1 * f[i + 2]) / 12
+    if order == 2:
+        second_der = np.zeros(len(func))
+        second_der[0] = (1 * func[0] - 2 * func[1] + 1 * func[2]) / 1
+        second_der[1] = (2 * func[0] - 5 * func[1] + 4 * func[2] - 1 * func[3]) / 1
+        second_der[-1] = (1 * func[-3] - 2 * func[-2] + 1 * func[-1]) / 1
+        second_der[-2] = (0 * func[-4] + 1 * func[-3] - 2 * func[-2] + 1 * func[-1]) / 1
+        for i in range(2, len(func) - 2, 1):
+            second_der[i] = (
+                -1 * func[i - 2] + 16 * func[i - 1] - 30 * func[i] + 16 * func[i + 1] - 1 * func[i + 2]
+            ) / 12
         return second_der / (step ** 2)
-    elif order == 3:
-        third_der = np.zeros(len(f))
-        third_der[0] = (-1 * f[0] + 3 * f[1] - 3 * f[2] + 1 * f[3]) / 1
-        third_der[1] = (-1 * f[0] + 3 * f[1] - 3 * f[2] + 1 * f[3]) / 1
-        third_der[-1] = (-1 * f[-4] + 3 * f[-3] - 3 * f[-2] + 1 * f[-1]) / 1
-        third_der[-2] = (5 * f[-5] - 22 * f[-4] + 36 * f[-3] - 26 * f[-2] + 7 * f[-1]) / 2
-        for i in range(2, len(f) - 2, 1):
-            third_der[i] = (-1 * f[i - 2] + 2 * f[i - 1] + 0 * f[i] - 2 * f[i + 1] + 1 * f[i + 2]) / 2
+    if order == 3:
+        third_der = np.zeros(len(func))
+        third_der[0] = (-1 * func[0] + 3 * func[1] - 3 * func[2] + 1 * func[3]) / 1
+        third_der[1] = (-1 * func[0] + 3 * func[1] - 3 * func[2] + 1 * func[3]) / 1
+        third_der[-1] = (-1 * func[-4] + 3 * func[-3] - 3 * func[-2] + 1 * func[-1]) / 1
+        third_der[-2] = (5 * func[-5] - 22 * func[-4] + 36 * func[-3] - 26 * func[-2] + 7 * func[-1]) / 2
+        for i in range(2, len(func) - 2, 1):
+            third_der[i] = (-1 * func[i - 2] + 2 * func[i - 1] + 0 * func[i] - 2 * func[i + 1] + 1 * func[i + 2]) / 2
         return third_der / (step ** 3)
-    elif order == 4:
-        fourth_der = np.zeros(len(f))
-        fourth_der[0] = (1 * f[0] - 4 * f[1] + 6 * f[2] - 4 * f[3] + 1 * f[4]) / 1
-        fourth_der[1] = (2 * f[0] - 9 * f[1] + 16 * f[2] - 14 * f[3] + 6 * f[4] - 1 * f[5]) / 1
-        fourth_der[-1] = (1 * f[-5] - 4 * f[-4] + 6 * f[-3] - 4 * f[-2] + 1 * f[-1]) / 1
-        fourth_der[-2] = (-1 * f[-6] + 6 * f[-5] - 14 * f[-4] + 16 * f[-3] - 9 * f[-2] + 2 * f[-1]) / 1
-        for i in range(2, len(f) - 2, 1):
-            fourth_der[i] = (1 * f[i - 2] - 4 * f[i - 1] + 6 * f[i] - 4 * f[i + 1] + 1 * f[i + 2]) / 1
+    if order == 4:
+        fourth_der = np.zeros(len(func))
+        fourth_der[0] = (1 * func[0] - 4 * func[1] + 6 * func[2] - 4 * func[3] + 1 * func[4]) / 1
+        fourth_der[1] = (2 * func[0] - 9 * func[1] + 16 * func[2] - 14 * func[3] + 6 * func[4] - 1 * func[5]) / 1
+        fourth_der[-1] = (1 * func[-5] - 4 * func[-4] + 6 * func[-3] - 4 * func[-2] + 1 * func[-1]) / 1
+        fourth_der[-2] = (
+            -1 * func[-6] + 6 * func[-5] - 14 * func[-4] + 16 * func[-3] - 9 * func[-2] + 2 * func[-1]
+        ) / 1
+        for i in range(2, len(func) - 2, 1):
+            fourth_der[i] = (1 * func[i - 2] - 4 * func[i - 1] + 6 * func[i] - 4 * func[i + 1] + 1 * func[i + 2]) / 1
         return fourth_der / (step ** 4)
+    return -1

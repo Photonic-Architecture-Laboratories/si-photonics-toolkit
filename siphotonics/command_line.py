@@ -1,7 +1,15 @@
 def readme():
-    with open(".\\README.md") as f:
-        return f.read()
+    """
+    Read README.md
+    :return:
+    """
+    with open(".\\README.md") as file:
+        return file.read()
 
 
 def main():
+    """
+    Print out content in README.md
+    :return:
+    """
     print(readme())
