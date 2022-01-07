@@ -103,11 +103,18 @@ os.chdir(user_dir)
 
 
 def polarization_frac(width, wavelength, te_or_tm):
+    """
+    Polarization fraction of `TE` or `TM` mode of light at a specific wavelength in a waveguide with a specific width.
+    :param width:
+    :param wavelength:
+    :param te_or_tm:
+    :return:
+    """
     width = width * 1000
     wavelength_nm = wavelength * 1000
-    if not (250 <= width <= 700):
+    if not 250 <= width <= 700:
         raise ValueError("Width must be between 0.25-0.7 micron")
-    if not (1200 <= wavelength_nm <= 1700):
+    if not 1200 <= wavelength_nm <= 1700:
         raise ValueError("wavelength must be between 1.2-1.7 micron")
 
     if isinstance(te_or_tm, str):
@@ -128,8 +135,8 @@ def polarization_frac(width, wavelength, te_or_tm):
         te_number = 0
         tm_number = 0
 
-        for j in range(len(F)):
-            if F[j](wavelength_nm, width)[0] < 1.44:
+        for j, _f in enumerate(F):
+            if _f(wavelength_nm, width)[0] < 1.44:
                 last_index = j
                 break
             if P[j](wavelength_nm, width)[0] > 0.5:
@@ -147,46 +154,35 @@ def polarization_frac(width, wavelength, te_or_tm):
 
         if te_or_tm[0:2] == "te" and int(te_or_tm[2:3]) < te_number:
             ind = int(te_or_tm[2:3])
-            a = {wavelength_nm: {width: pol_te[ind]}}
-            pol_te_list[ind].update(a)
+            a_dict = {wavelength_nm: {width: pol_te[ind]}}
+            pol_te_list[ind].update(a_dict)
             return pol_te[ind]
-        else:
-            if not te_or_tm[0:2] == "tm":
-                raise ValueError(
-                    "There is no TE"
-                    + te_or_tm[2:3]
-                    + " for wavelength: "
-                    + str(wavelength_nm)
-                    + " & Width: "
-                    + str(width)
-                )
+        if not te_or_tm[0:2] == "tm":
+            raise ValueError(
+                "There is no TE" + te_or_tm[2:3] + " for wavelength: " + str(wavelength_nm) + " & Width: " + str(width)
+            )
 
         if te_or_tm[0:2] == "tm" and int(te_or_tm[2:3]) < tm_number:
             ind = int(te_or_tm[2:3])
-            b = {wavelength_nm: {width: pol_tm[ind]}}
-            pol_tm_list[ind].update(b)
+            a_dict = {wavelength_nm: {width: pol_tm[ind]}}
+            pol_tm_list[ind].update(a_dict)
             return pol_tm[ind]
-        else:
-            if not te_or_tm[0:2] == "te":
-                raise ValueError(
-                    "There is no TM"
-                    + te_or_tm[2:3]
-                    + " for wavelength: "
-                    + str(wavelength_nm)
-                    + " & Width: "
-                    + str(width)
-                )
+
+        if not te_or_tm[0:2] == "te":
+            raise ValueError(
+                "There is no TM" + te_or_tm[2:3] + " for wavelength: " + str(wavelength_nm) + " & Width: " + str(width)
+            )
 
     if isinstance(te_or_tm, int):
-        if not (1 <= te_or_tm <= 5):
+        if not 1 <= te_or_tm <= 5:
             raise ValueError("Mode should be between 1-5")
         if te_or_tm == 1:
             return P[0](wavelength_nm, width)[0]
-        elif te_or_tm == 2:
+        if te_or_tm == 2:
             return P[1](wavelength_nm, width)[0]
-        elif te_or_tm == 3:
+        if te_or_tm == 3:
             return P[2](wavelength_nm, width)[0]
-        elif te_or_tm == 4:
+        if te_or_tm == 4:
             return P[3](wavelength_nm, width)[0]
-        else:
-            return P[4](wavelength_nm, width)[0]
+        return P[4](wavelength_nm, width)[0]
+    return -1
