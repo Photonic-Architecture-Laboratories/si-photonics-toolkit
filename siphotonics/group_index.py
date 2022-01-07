@@ -12,7 +12,7 @@ os.chdir(user_dir)
 wavelength_array = np.linspace(1.2, 1.7, 101)
 neff_array = []
 for i in wavelength_array:
-    neff_array.append(sip.neff(0.5, i, 1))
+    neff_array.append(sip.neff(0.5, i))
 
 difference = np.diff(neff_array) / np.diff(wavelength_array)
 
@@ -24,9 +24,9 @@ def ng(width, wavelength):
         raise ValueError("Width must be between 0.3 and 0.7 microns.")
 
     if wavelength == 1.7:
-        n_g = sip.neff(width, wavelength, 1) - wavelength * (
-                    sip.neff(width, wavelength, 1) - sip.neff(width, wavelength - 0.001, 1)) / 0.001
+        n_g = sip.neff(width, wavelength) - wavelength * (
+                    sip.neff(width, wavelength) - sip.neff(width, wavelength - 0.001)) / 0.001
     else:
-        n_g = sip.neff(width, wavelength, 1) - wavelength * (
-                    sip.neff(width, wavelength + 0.001, 1) - sip.neff(width, wavelength, 1)) / 0.001
+        n_g = sip.neff(width, wavelength) - wavelength * (
+                    sip.neff(width, wavelength + 0.001) - sip.neff(width, wavelength)) / 0.001
     return n_g

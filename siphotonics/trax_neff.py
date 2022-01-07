@@ -8,10 +8,10 @@ from jax.config import config
 
 config.update("jax_enable_x64", True)
 
-user_dir = os.getcwd()
+user_dir= os.getcwd()
 os.chdir(os.path.join(os.path.dirname(__file__), "data"))
 
-with open('neff_fitted_Si_fitted_SiO2_width_240_5_700_wav_1200_0p1_1700.csv') as file:
+with open('neff_fitted_Si_fitted_SiO2_width_240_5_700_wav_1200_0p1_1700.csv', ) as file:
     lines = file.readlines()
 
 os.chdir(user_dir)
@@ -34,25 +34,20 @@ neff_data = jnp.reshape(neff_data, (wav_size, width_size))
 def _read_effective_index(file_name):
     os.chdir(os.path.join(os.path.dirname(__file__), "data"))
 
-    with open(file_name, "r") as file:
-        lines = file.readlines()
+    with open(file_name, "r") as _file:
+        _lines = _file.readlines()
 
     os.chdir(user_dir)
 
-    neff_data = jnp.array(list(map(float, lines[1][:-2].split(','))))
-    width_data = jnp.array(list(map(float, lines[3][:-2].split(','))))
-    wav_data = jnp.array(list(map(float, lines[5][:-2].split(','))))
+    _neff_data = jnp.array(list(map(float, _lines[1][:-2].split(','))))
+    _width_data = jnp.array(list(map(float, _lines[3][:-2].split(','))))
+    _wav_data = jnp.array(list(map(float, _lines[5][:-2].split(','))))
 
-    wav_size = wav_data.shape[0]
-    wav_min = np.min(wav_data)
-    wav_max = np.max(wav_data)
+    _wav_size = wav_data.shape[0]
+    _width_size = width_data.shape[0]
 
-    width_size = width_data.shape[0]
-    width_min = np.min(width_data)
-    width_max = np.max(width_data)
-
-    neff_data = neff_data.reshape((width_size, wav_size))
-    return neff_data, width_data, wav_data
+    _neff_data = _neff_data.reshape((_width_size, _wav_size))
+    return _neff_data, _width_data, _wav_data
 
 
 effective_index_te0, width_data_te0, wav_data_te0 = \
@@ -80,7 +75,7 @@ wav_max_te0 = np.max(wav_data_te0)
 
 
 @jit
-def neff(width, wavelength, mode=1):
+def neff(width, wavelength):
     """
     Gets Effective Index value by using corresponding parameters. This is
     a JAX compatible function. JIT is enabled.

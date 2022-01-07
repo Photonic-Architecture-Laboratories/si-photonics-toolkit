@@ -4,10 +4,11 @@ install:
 
 format:
 	isort */*.py && \
-		black */*.py
+		black siphotonics/*.py tests/*.py setup.py
 
 lint:
-	pylint --disable=R,C *.py
+	pylint --disable=R,C,W1514 \
+ 		siphotonics/*.py tests/*.py
 
 test:
 	python -m pytest -vv --cov=siphotonics
