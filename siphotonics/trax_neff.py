@@ -56,19 +56,19 @@ def _read_effective_index(file_name):
 
 
 effective_index_te0, width_data_te0, wav_data_te0 = \
-    _read_effective_index("neff_te0_fitted_Si_fitted_SiO2_width_240_1_700_wav_1200_0p1_1700.csv")
+    _read_effective_index("neff_te0_fitted_Si_fitted_SiO2_width_240_5_700_wav_1200_0p1_1700.csv")
 
 effective_index_tm0, _, _ = \
-    _read_effective_index("neff_tm0_fitted_Si_fitted_SiO2_width_240_1_700_wav_1200_0p1_1700.csv")
+    _read_effective_index("neff_tm0_fitted_Si_fitted_SiO2_width_240_5_700_wav_1200_0p1_1700.csv")
 
 effective_index_te1, _, _ = \
-    _read_effective_index("neff_te1_fitted_Si_fitted_SiO2_width_240_1_700_wav_1200_0p1_1700.csv")
+    _read_effective_index("neff_te1_fitted_Si_fitted_SiO2_width_240_5_700_wav_1200_0p1_1700.csv")
 
 effective_index_tm1, _, _ = \
-    _read_effective_index("neff_tm1_fitted_Si_fitted_SiO2_width_240_1_700_wav_1200_0p1_1700.csv")
+    _read_effective_index("neff_tm1_fitted_Si_fitted_SiO2_width_240_5_700_wav_1200_0p1_1700.csv")
 
 effective_index_te2, _, _ = \
-    _read_effective_index("neff_te2_fitted_Si_fitted_SiO2_width_240_1_700_wav_1200_0p1_1700.csv")
+    _read_effective_index("neff_te2_fitted_Si_fitted_SiO2_width_240_5_700_wav_1200_0p1_1700.csv")
 
 width_size_te0 = width_data_te0.shape[0]
 width_min_te0 = np.min(width_data_te0)
