@@ -1,4 +1,4 @@
-SUBJECT_FILES=siphotonics/*.py tests/*.py setup.py
+TARGET_FILES=siphotonics/*.py tests/*.py setup.py
 
 install:
 	pip install --upgrade pip && \
@@ -8,19 +8,18 @@ format:
 	autoflake --in-place --remove-all-unused-imports \
 		--remove-unused-variables --expand-star-imports \
 		--ignore-init-module-imports \
-			$(SUBJECT_FILES) && \
-	isort --filter-files $(SUBJECT_FILES) && \
-	black --line-length=120 $(SUBJECT_FILES)
+			$(TARGET_FILES) && \
+	isort --filter-files $(TARGET_FILES) && \
+	black --line-length=120 $(TARGET_FILES)
 
 lint:
 	pylint --disable=R0911,R0912,R0401,C0114,W1514 \
 		--max-line-length=120 \
-			$(SUBJECT_FILES)
+			$(TARGET_FILES)
 
 test:
-	python -m pytest -vv --cov=siphotonics
+	python -m pytest -vv --cov=siphotonics --disable-warnings
 
-all: install lint test
+ci: install lint test
 
-ci:
-	pre-commit lint test
+all: install format lint test
