@@ -19,7 +19,13 @@ for i in wavelength_array:
 difference = np.diff(neff_array) / np.diff(wavelength_array)
 
 
-def ng(width, wavelength):
+def group_index(width, wavelength):
+    """
+    Group Index of light at a specified wavelength in a waveguide with a specified width.
+    :param width:
+    :param wavelength:
+    :return:
+    """
     if wavelength > 1.7 or wavelength < 1.2:
         raise ValueError("Wavelength must be between 1.2 and 1.7 microns.")
     if width > 0.7 or width < 0.3:

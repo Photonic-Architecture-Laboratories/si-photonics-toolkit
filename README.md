@@ -37,8 +37,9 @@ sip.neff(width=0.5,  wavelength=1.55)
 ```
 
 ### Group Index
+
 ```python
-sip.ng(width=0.5,  wavelength=1.55)
+sip.group_index(width=0.5, wavelength=1.55)
 ```
 
 ### Polarization Fraction of First Five Modes
@@ -60,7 +61,7 @@ sip.perm_oxide(wavelength=1.55)
 ```python
 sip.derivative(data, order, step)
 ```
-    
+
 * **data**: Array-like data structure
 * **order**: Order of derivative. Can be an integer from 1 to 5. By default, 1.
-* **step**: Step size between indices of "data". For example, step size of the array `np.linspace(0, 2, 100)` equals 2/100. 
+* **step**: Step size between indices of "data". For example, step size of the array `np.linspace(0, 2, 100)` equals 2/100.

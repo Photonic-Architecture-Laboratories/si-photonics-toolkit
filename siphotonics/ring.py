@@ -11,4 +11,4 @@ def fsr(wavelength, radius, width):
     :param width:
     :return:
     """
-    return (wavelength ** 2) / (2 * np.pi * radius * sip.ng(width, wavelength))
+    return (wavelength ** 2) / (2 * np.pi * radius * sip.group_index(width, wavelength))
