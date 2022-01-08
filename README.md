@@ -1,5 +1,12 @@
 # siphotonics
 
+<p align="center">
+    <a href="https://git.ku.edu.tr/esmagden/siphotonics/badges/master/pipeline.svg" alt="Pipeline">
+        <img src="https://git.ku.edu.tr/esmagden/siphotonics/badges/master/pipeline.svg" /></a>
+    <a href="https://git.ku.edu.tr/esmagden/siphotonics/-/jobs/artifacts/master/raw/public/pylint.svg?job=format-check" alt="Pylint">
+        <img src="https://git.ku.edu.tr/esmagden/siphotonics/-/jobs/artifacts/master/raw/public/pylint.svg?job=format-check" /></a>
+</p>
+
 **siphotonics** is a package that provides fundamental waveguide and material parameters to aid in the design of silicon photonic components on SOI platforms with high accuracy and extremely fast runtime.
 
 * For tutorials, see **Example Notebooks** folder.
