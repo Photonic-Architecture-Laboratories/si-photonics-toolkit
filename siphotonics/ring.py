@@ -1,6 +1,6 @@
 import numpy as np
 
-import siphotonics as sip
+from siphotonics.group_index import group_index
 
 
 def fsr(wavelength, radius, width):
@@ -11,4 +11,4 @@ def fsr(wavelength, radius, width):
     :param width:
     :return:
     """
-    return (wavelength ** 2) / (2 * np.pi * radius * sip.group_index(width, wavelength))
+    return (wavelength ** 2) / (2 * np.pi * radius * group_index(width, wavelength))

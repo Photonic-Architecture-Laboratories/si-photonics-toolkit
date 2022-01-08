@@ -3,7 +3,7 @@ import pickle
 
 import numpy as np
 
-import siphotonics as sip
+from siphotonics.effective_index import neff
 
 user_dir = os.getcwd()
 os.chdir(os.path.join(os.path.dirname(__file__), "data"))
@@ -14,7 +14,7 @@ os.chdir(user_dir)
 wavelength_array = np.linspace(1.2, 1.7, 101)
 neff_array = []
 for i in wavelength_array:
-    neff_array.append(sip.neff(0.5, i))
+    neff_array.append(neff(0.5, i))
 
 difference = np.diff(neff_array) / np.diff(wavelength_array)
 
@@ -33,12 +33,16 @@ def group_index(width, wavelength):
 
     if wavelength == 1.7:
         n_g = (
-            sip.neff(width, wavelength)
-            - wavelength * (sip.neff(width, wavelength) - sip.neff(width, wavelength - 0.001)) / 0.001
+            sip.effective_index(width, wavelength)
+            - wavelength
+            * (sip.effective_index(width, wavelength) - sip.effective_index(width, wavelength - 0.001))
+            / 0.001
         )
     else:
         n_g = (
-            sip.neff(width, wavelength)
-            - wavelength * (sip.neff(width, wavelength + 0.001) - sip.neff(width, wavelength)) / 0.001
+            sip.effective_index(width, wavelength)
+            - wavelength
+            * (sip.effective_index(width, wavelength + 0.001) - sip.effective_index(width, wavelength))
+            / 0.001
         )
     return n_g

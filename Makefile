@@ -13,7 +13,7 @@ format:
 	black --line-length=120 $(TARGET_FILES)
 
 lint:
-	pylint --disable=R0911,R0912,R0401,C0114,W1514 \
+	pylint --disable=R0911,R0912,C0114,W1514 \
 		--max-line-length=120 \
 			$(TARGET_FILES)
 
