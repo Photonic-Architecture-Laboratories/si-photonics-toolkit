@@ -37,7 +37,7 @@ format-check:
     - make lint
     - score=$(sed -n 's/^Your code has been rated at \([-0-9.]*\)\/.*/\1/p' public/pylint.txt)
     - echo "Pylint score was $score"
-    - anybadge --label=Pylint --value=$score --file=public/pylint.svg pylint
+    - anybadge -o --label=Code Quality --value=$score --file=public/pylint.svg pylint
   artifacts:
    paths:
     - public/pylint.svg
