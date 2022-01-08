@@ -17,7 +17,7 @@ lint:
 		--max-line-length=120  --exit-zero --output-format=text \
 			$(TARGET_FILES) | tee public/pylint.txt
 test:
-	python -m pytest -vv --cov=siphotonics --disable-warnings
+	python -m pytest -vv --cov=siphotonics --disable-warnings | tee public/coverage.txt
 
 ci: install lint test
 

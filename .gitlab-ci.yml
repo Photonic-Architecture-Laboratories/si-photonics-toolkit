@@ -50,3 +50,9 @@ test:
     - merge_requests
   script:
     - make test
+    - score=$(sed -n '/TOTAL\s+\d+\s+\d+\s+(\d+%)/' public/pylint.txt)
+    - echo "Coverage score was $score"
+    - anybadge -o --label=Coverage --value=$score --file=public/coverage.svg pylint-cov
+  artifacts:
+    paths:
+      - ./public/
