@@ -35,7 +35,7 @@ format-check:
     - merge_requests
   script:
     - make lint
-    - score=$(sed -n 's/^Your code has been rated at \([-0-9.]*\)\/.*/\1/p' pylint.txt)
+    - score=$(sed -n 's/^Your code has been rated at \([-0-9.]*\)\/.*/\1/p' public/pylint.txt)
     - echo "Pylint score was $score"
     - anybadge --label=Pylint --value=$score --file=public/pylint.svg pylint
   artifacts:
