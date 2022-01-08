@@ -50,8 +50,8 @@ test:
     - merge_requests
   script:
     - make test
-    - score=$(grep -E 'TOTAL\s+\d+\s+\d+\s+(\d+%)' public/coverage.txt)
-    - echo "Coverage score was $score"
+#    - score=$(grep -E 'TOTAL\s+\d+\s+\d+\s+(\d+%)' public/coverage.txt)
+#    - echo "Coverage score was $score"
 #    - anybadge -o --label=Coverage --value=$score --file=public/coverage.svg coverage
   artifacts:
     paths:
