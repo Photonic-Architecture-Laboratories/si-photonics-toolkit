@@ -1,4 +1,7 @@
 pylint
+sed
+tee
+anybadge
 isort
 pytest
 click
