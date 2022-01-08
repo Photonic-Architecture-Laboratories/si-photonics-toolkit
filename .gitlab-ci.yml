@@ -52,7 +52,7 @@ test:
     - make test
     - score=$(grep -E 'TOTAL\s+\d+\s+\d+\s+(\d+%)' public/coverage.txt)
     - echo "Coverage score was $score"
-    - anybadge -o --label=Coverage --value=$score --file=public/coverage.svg pylint-cov
+#    - anybadge -o --label=Coverage --value=$score --file=public/coverage.svg coverage
   artifacts:
     paths:
       - ./public/
