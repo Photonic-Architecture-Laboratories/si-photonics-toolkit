@@ -14,7 +14,7 @@ format:
 
 lint:
 	- pylint --disable=R0911,R0912,C0114,W1514 \
-		--max-line-length=120  --output-format=text \
+		--max-line-length=120  --exit-zero --output-format=text \
 			$(TARGET_FILES) | tee public/pylint.txt
 test:
 	python -m pytest -vv --cov=siphotonics --disable-warnings
