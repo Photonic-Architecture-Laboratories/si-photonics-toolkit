@@ -1,10 +1,13 @@
-from setuptools import setup
-import setuptools
+from setuptools import find_packages, setup
 
 
 def readme():
-    with open("README.md") as f:
-        return f.read()
+    """
+    Read README.md
+    :return:
+    """
+    with open("README.md") as file:
+        return file.read()
 
 
 setup(
@@ -27,7 +30,7 @@ setup(
     author="Aycan Deniz Vit",
     author_email="avit16@ku.edu.tr",
     license="MIT",
-    packages=setuptools.find_packages(),
+    packages=find_packages(),
     install_requires=[
         "trax",
         "pylint",

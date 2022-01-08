@@ -1,0 +1,52 @@
+image: python:3.9
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
+before_script:
+  - python -V
+  - export PYTHONPATH="$PYTHONPATH:."
+  - pip install virtualenv
+  - virtualenv venv
+  - source venv/bin/activate
+
+stages:
+  - Setup
+  - Lint
+  - Test
+
+install-deps:
+  stage: Setup
+  only:
+    - master
+    - merge_requests
+  script:
+    - make install
+
+format-check:
+  stage: Lint
+  only:
+    - master
+    - merge_requests
+  script:
+    - make lint
+    - mkdir -p public
+    - score=$(sed -n 's/^Your code has been rated at \([-0-9.]*\)\/.*/\1/p' public/pylint.txt)
+    - echo "Pylint score was $score"
+    - anybadge -o --label=Code\ Quality --value=$score --file=public/pylint.svg pylint
+  artifacts:
+    paths:
+      - ./public/
+
+test:
+  stage: Test
+  only:
+    - master
+    - merge_requests
+  script:
+    - make test
