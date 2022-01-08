@@ -32,17 +32,7 @@ def group_index(width, wavelength):
         raise ValueError("Width must be between 0.3 and 0.7 microns.")
 
     if wavelength == 1.7:
-        n_g = (
-            sip.effective_index(width, wavelength)
-            - wavelength
-            * (sip.effective_index(width, wavelength) - sip.effective_index(width, wavelength - 0.001))
-            / 0.001
-        )
+        n_g = neff(width, wavelength) - wavelength * (neff(width, wavelength) - neff(width, wavelength - 0.001)) / 0.001
     else:
-        n_g = (
-            sip.effective_index(width, wavelength)
-            - wavelength
-            * (sip.effective_index(width, wavelength + 0.001) - sip.effective_index(width, wavelength))
-            / 0.001
-        )
+        n_g = neff(width, wavelength) - wavelength * (neff(width, wavelength + 0.001) - neff(width, wavelength)) / 0.001
     return n_g
