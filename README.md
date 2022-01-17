@@ -1,4 +1,4 @@
-[![Github CI](https://github.com/Photonic-Architecture-Laboratories/siphotonics/actions/workflows/makefile.yml/badge.svg)](https://github.com/Photonic-Architecture-Laboratories/siphotonics/actions/workflows/makefile.yml)
+[![build](https://github.com/Photonic-Architecture-Laboratories/siphotonics/actions/workflows/makefile.yml/badge.svg)](https://github.com/Photonic-Architecture-Laboratories/siphotonics/actions/workflows/makefile.yml)
 
 # siphotonics
 
