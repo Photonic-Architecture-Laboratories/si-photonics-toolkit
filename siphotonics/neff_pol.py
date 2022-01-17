@@ -1,6 +1,8 @@
 import os
 import pickle
 
+from siphotonics.effective_index import width_min, width_max, wav_min, wav_max
+
 user_dir = os.getcwd()
 os.chdir(os.path.join(os.path.dirname(__file__), "data"))
 
@@ -34,10 +36,10 @@ def polarization_frac(width, wavelength, te_or_tm):
     """
     width = width * 1000
     wavelength_nm = wavelength * 1000
-    if not 250 <= width <= 700:
-        raise ValueError("Width must be between 0.25-0.7 micron")
-    if not 1200 <= wavelength_nm <= 1700:
-        raise ValueError("wavelength must be between 1.2-1.7 micron")
+    if not width_min * 1000 <= width <= width_max * 1000:
+        raise ValueError(f"Width must be between {width_min}-{width_max} micron")
+    if not wav_min * 1000 <= wavelength_nm <= wav_max * 1000:
+        raise ValueError(f"wavelength must be between {wav_min}-{wav_max} micron")
 
     if isinstance(te_or_tm, str):
 
