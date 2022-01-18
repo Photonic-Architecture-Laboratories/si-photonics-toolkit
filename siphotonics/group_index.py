@@ -1,10 +1,4 @@
-import os
-import pickle
-
-import numpy as np
-
-from siphotonics.effective_index import neff
-from siphotonics.effective_index import width_min, width_max, wav_min, wav_max
+from siphotonics.effective_index import neff, wav_max, wav_min, width_max, width_min
 
 
 def group_index(width, wavelength):
