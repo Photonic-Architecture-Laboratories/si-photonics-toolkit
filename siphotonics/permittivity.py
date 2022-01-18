@@ -1,6 +1,8 @@
 import os
 import pickle
 
+from siphotonics.effective_index import wav_max, wav_min
+
 user_dir = os.getcwd()
 os.chdir(os.path.join(os.path.dirname(__file__), "data"))
 with open("permittivity.pickle", "rb") as handle:
@@ -14,7 +16,7 @@ def perm_si(wavelength):
     :param wavelength:
     :return:
     """
-    if not 1.2 <= wavelength <= 1.7:
+    if not wav_min <= wavelength <= wav_max:
         raise ValueError("Wavelength must be between 1.2-1.7 micron")
 
     return perm["Si"](wavelength * 1000)
@@ -26,7 +28,7 @@ def perm_oxide(wavelength):
     :param wavelength:
     :return:
     """
-    if not 1.2 <= wavelength <= 1.7:
+    if not wav_min <= wavelength <= wav_max:
         raise ValueError("Wavelength must be between 1.2-1.7 micron")
 
     return perm["SiO2"](wavelength * 1000)
