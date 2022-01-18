@@ -6,14 +6,6 @@ import numpy as np
 from siphotonics.effective_index import neff
 from siphotonics.effective_index import width_min, width_max, wav_min, wav_max
 
-user_dir = os.getcwd()
-os.chdir(os.path.join(os.path.dirname(__file__), "data"))
-with open(r"Si_Palik_Refractive_Index.pickle", "rb") as input_file:
-    refractive_index = pickle.load(input_file)
-os.chdir(user_dir)
-
-wavelength_array = np.linspace(wav_min, wav_max, 101)
-
 
 def group_index(width, wavelength):
     """
