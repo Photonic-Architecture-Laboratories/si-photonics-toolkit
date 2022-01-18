@@ -1,7 +1,7 @@
 import os
 import pickle
 
-from siphotonics.effective_index import width_min, width_max, wav_min, wav_max
+from siphotonics.effective_index import wav_min, wav_max
 
 user_dir = os.getcwd()
 os.chdir(os.path.join(os.path.dirname(__file__), "data"))
