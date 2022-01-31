@@ -1,12 +1,27 @@
-import numpy as np
 from jax import jit
 from jax.scipy import ndimage
 from trax import fastmath
 
-from siphotonics.read_data import neff_data, wav_min, wav_size, wav_max, width_min, width_size, width_max, \
-    effective_index_te0, width_min_te0, width_size_te0, width_max_te0, wav_size_te0, wav_min_te0, wav_max_te0, \
-    effective_index_tm0, effective_index_te1, effective_index_tm1, effective_index_te2
-from siphotonics.util import _read_effective_index
+from siphotonics.read_data import (
+    effective_index_te0,
+    effective_index_te1,
+    effective_index_te2,
+    effective_index_tm0,
+    effective_index_tm1,
+    neff_data,
+    wav_max,
+    wav_max_te0,
+    wav_min,
+    wav_min_te0,
+    wav_size,
+    wav_size_te0,
+    width_max,
+    width_max_te0,
+    width_min,
+    width_min_te0,
+    width_size,
+    width_size_te0,
+)
 
 
 @jit
