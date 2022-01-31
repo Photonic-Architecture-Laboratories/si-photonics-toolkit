@@ -9,4 +9,5 @@ black
 autoflake
 pre-commit
 pytest-cov
+jax
 trax
