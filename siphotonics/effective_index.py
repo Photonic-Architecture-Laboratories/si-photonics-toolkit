@@ -10,17 +10,11 @@ from siphotonics.read_data import (
     effective_index_tm1,
     neff_data,
     wav_max,
-    wav_max_te0,
     wav_min,
-    wav_min_te0,
     wav_size,
-    wav_size_te0,
     width_max,
-    width_max_te0,
     width_min,
-    width_min_te0,
     width_size,
-    width_size_te0,
 )
 
 
@@ -55,8 +49,8 @@ def neff_te0(width, wavelength):
     return ndimage.map_coordinates(
         effective_index_te0,
         [
-            (width - width_min_te0) * ((width_size_te0 - 1) / (width_max_te0 - width_min_te0)),
-            (wavelength - wav_min_te0) * ((wav_size_te0 - 1) / (wav_max_te0 - wav_min_te0)),
+            (width - width_min) * ((width_size - 1) / (width_max - width_min)),
+            (wavelength - wav_min) * ((wav_size - 1) / (wav_max - wav_min)),
         ],
         order=1,
     )
@@ -74,8 +68,8 @@ def neff_tm0(width, wavelength):
     return ndimage.map_coordinates(
         effective_index_tm0,
         [
-            (width - width_min_te0) * ((width_size_te0 - 1) / (width_max_te0 - width_min_te0)),
-            (wavelength - wav_min_te0) * ((wav_size_te0 - 1) / (wav_max_te0 - wav_min_te0)),
+            (width - width_min) * ((width_size - 1) / (width_max - width_min)),
+            (wavelength - wav_min) * ((wav_size - 1) / (wav_max - wav_min)),
         ],
         order=1,
     )
@@ -93,8 +87,8 @@ def neff_te1(width, wavelength):
     return ndimage.map_coordinates(
         effective_index_te1,
         [
-            (width - width_min_te0) * ((width_size_te0 - 1) / (width_max_te0 - width_min_te0)),
-            (wavelength - wav_min_te0) * ((wav_size_te0 - 1) / (wav_max_te0 - wav_min_te0)),
+            (width - width_min) * ((width_size - 1) / (width_max - width_min)),
+            (wavelength - wav_min) * ((wav_size - 1) / (wav_max - wav_min)),
         ],
         order=1,
     )
@@ -112,8 +106,8 @@ def neff_tm1(width, wavelength):
     return ndimage.map_coordinates(
         effective_index_tm1,
         [
-            (width - width_min_te0) * ((width_size_te0 - 1) / (width_max_te0 - width_min_te0)),
-            (wavelength - wav_min_te0) * ((wav_size_te0 - 1) / (wav_max_te0 - wav_min_te0)),
+            (width - width_min) * ((width_size - 1) / (width_max - width_min)),
+            (wavelength - wav_min) * ((wav_size - 1) / (wav_max - wav_min)),
         ],
         order=1,
     )
@@ -131,8 +125,8 @@ def neff_te2(width, wavelength):
     return ndimage.map_coordinates(
         effective_index_te2,
         [
-            (width - width_min_te0) * ((width_size_te0 - 1) / (width_max_te0 - width_min_te0)),
-            (wavelength - wav_min_te0) * ((wav_size_te0 - 1) / (wav_max_te0 - wav_min_te0)),
+            (width - width_min) * ((width_size - 1) / (width_max - width_min)),
+            (wavelength - wav_min) * ((wav_size - 1) / (wav_max - wav_min)),
         ],
         order=1,
     )
