@@ -8,7 +8,16 @@ MODES = ["te0", "te1", "te2", "tm0", "tm1"]
 config.update("jax_enable_x64", True)
 
 
-def _read_effective_index(file_name):
+def _read_effective_index(file_name: str) -> tuple[jnp.ndarray, jnp.ndarray, jnp.ndarray]:
+    """Reads effective index data from file.
+
+    Args:
+        file_name (str): Name of the file.
+
+    Returns:
+        tuple[jnp.ndarray, jnp.ndarray, jnp.ndarray]: Effective index data, width data, wavelength data.
+    """
+    
     with open(os.path.join(os.path.dirname(__file__), "data", file_name), "r") as _file:
         _lines = _file.readlines()
 

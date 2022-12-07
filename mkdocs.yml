@@ -1,0 +1,49 @@
+site_name: SiPhotonics
+copyright: Copyright &copy; 2022 Photonic Architecture Laboratories
+repo_url: https://github.com/Photonic-Architecture-Laboratories/siphotonics
+repo_name: siphotonics
+
+nav:
+  - Getting Started: index.md
+  - API Reference: api.md
+
+plugins:
+  - search
+  - mkdocstrings
+  - git-revision-date-localized:
+      type: datetime
+      fmt: '%Y-%m-%d %H:%M'
+  - git-authors
+
+
+theme:
+  name: 'material'
+  icon:
+    logo: material/flare
+    repo: fontawesome/brands/git-alt
+  font:
+    text: Ubuntu
+  features:
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.top
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+extra:
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:aycandv@gmail.com
+    - icon: fontawesome/brands/github 
+      link: https://github.com/aycandv
+
