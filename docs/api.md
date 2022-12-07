@@ -6,4 +6,4 @@
 
 :::siphotonics.util
 
-{{ git_page_authors }}
+by {{ git_page_authors }}
