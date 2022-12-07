@@ -5,6 +5,10 @@ repo_name: siphotonics
 
 nav:
   - Getting Started: index.md
+  - Examples: 
+    - Effective Index: 1- Effective Index.ipynb
+    - Group Index: 3- Group Index.ipynb
+    - Permittivity: 2- Permittivity.ipynb
   - API Reference: api.md
 
 plugins:
@@ -14,6 +18,9 @@ plugins:
       type: datetime
       fmt: '%Y-%m-%d %H:%M'
   - git-authors
+  - mkdocs-jupyter:
+      execute_notebooks: false
+      include: ["*.ipynb"]
 
 
 theme:
