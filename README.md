@@ -1,74 +1,43 @@
-# siphotonics
+[![build](https://github.com/Photonic-Architecture-Laboratories/siphotonics/actions/workflows/makefile.yml/badge.svg)](https://github.com/Photonic-Architecture-Laboratories/siphotonics/actions/workflows/makefile.yml)
+[![Documentation Status](https://readthedocs.org/projects/siphotonics/badge/?version=latest)](https://siphotonics.readthedocs.io/en/latest/?badge=latest)
 
-<p align="center">
-    <a href="https://git.ku.edu.tr/esmagden/siphotonics/badges/master/pipeline.svg" alt="Pipeline">
-        <img src="https://git.ku.edu.tr/esmagden/siphotonics/badges/master/pipeline.svg" /></a>
-    <a href="https://git.ku.edu.tr/esmagden/siphotonics/-/jobs/artifacts/master/raw/public/pylint.svg?job=format-check" alt="Pylint">
-        <img src="https://git.ku.edu.tr/esmagden/siphotonics/-/jobs/artifacts/master/raw/public/pylint.svg?job=format-check" /></a>
-</p>
 
-**siphotonics** is a package that provides fundamental waveguide and material parameters to aid in the design of silicon photonic components on SOI platforms with high accuracy and extremely fast runtime.
+# Siphotonics
 
-* For tutorials, see **Example Notebooks** folder.
+## Getting Started
+
+**SiPhotonics** is a toolkit providing fundamental waveguide and material properties to aid in the design of silicon photonic components on SOI platforms with high accuracy and extremely fast runtime. See the [documentation](https://siphotonics.readthedocs.io/en/latest/) for tutorials and API reference.
 
 ## Installation
 
-### Colab
-If you use Colab environment, you need to import **siphotonics** using the code snippet below:
+### Pip
 
-```python
-!pip install -q -U git+https://github.com/google/trax@master
+The package can be installed via pip:
 
-from google.colab import drive
-import os
+    pip install siphotonics
 
-root = os.getcwd()
-drive.mount('/content/gdrive')
-os.chdir('/content/gdrive/Shared drives/PAL Drive/Software/SiPhotonics Python/siphotonics')
+### Build from source
 
-import siphotonics as sip
-os.chdir(root)
-```
+Alternatively, the package can be built from source by cloning the repository and running the setup script:
 
-### Windows, Linux and macOS
-* Go to the directory where you clone this repo.
-* Execute `pip install .`
-* Done.
+    git clone https://github.com/Photonic-Architecture-Laboratories/siphotonics.git
+    cd siphotonics
+    python setup.py install
 
-## Usage
+## Dependencies
 
-### Effective Index
-```python
-sip.neff(width=0.5,  wavelength=1.55)
-sip.neff(width=0.5,  wavelength=1.55)
-```
+The package requires the following packages to be installed:
 
-### Group Index
+-   [NumPy](https://numpy.org/)
+-   [Jax](https://jax.readthedocs.io/en/latest/index.html)
+-   [Trax](https://trax-ml.readthedocs.io/en/latest/)
 
-```python
-sip.group_index(width=0.5, wavelength=1.55)
-```
+## Citing SiPhotonics Toolkit
 
-### Polarization Fraction of First Five Modes
-```python
-sip.polarization_frac(width=0.5,  wavelength=1.55, mode="tm1")
-sip.polarization_frac(width=0.5,  wavelength=1.55, mode="tE0")
-sip.polarization_frac(width=0.5,  wavelength=1.55, mode="Te1")
-sip.polarization_frac(width=0.5,  wavelength=1.55, mode=1)
-sip.polarization_frac(width=0.5,  wavelength=1.55, mode=5)
-```
-
-### Permittivity of Si & SiO2
-```python
-sip.perm_si(wavelength=1.55)
-sip.perm_oxide(wavelength=1.55)
-```
-
-### Derivative of an Array
-```python
-sip.derivative(data, order, step)
-```
-
-* **data**: Array-like data structure
-* **order**: Order of derivative. Can be an integer from 1 to 5. By default, 1.
-* **step**: Step size between indices of "data". For example, step size of the array `np.linspace(0, 2, 100)` equals 2/100.
+    @software{siphotonics2022github,
+        url = {https://github.com/Photonic-Architecture-Laboratories/siphotonics},
+        author = {Aycan Deniz Vit, Emir Salih Mağden},
+        title = {SiPhotonics: A Python package for the design of silicon photonic components},
+        year = {2022},  
+        version = {0.1.0},
+    }
