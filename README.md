@@ -1,4 +1,6 @@
 [![build](https://github.com/Photonic-Architecture-Laboratories/siphotonics/actions/workflows/makefile.yml/badge.svg)](https://github.com/Photonic-Architecture-Laboratories/siphotonics/actions/workflows/makefile.yml)
+[![Documentation Status](https://readthedocs.org/projects/siphotonics/badge/?version=latest)](https://siphotonics.readthedocs.io/en/latest/?badge=latest)
+
 
 # siphotonics
 
