@@ -28,8 +28,6 @@ jobs:
           tag_name: ${{ env.REVISION }}
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-      - name: Build Package
-        run: python3 setup.py sdist bdist_wheel
       - name: Publish package
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
