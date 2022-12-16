@@ -17,23 +17,37 @@ classifiers = [
 ]
 keywords = ["photonics", "nanophotonics", "silicon photonics"]
 dependencies = [
-    "numpy",
     "jax",
-    "jaxlib",
     "trax",
     'tomli; python_version < "3.11"',
 ]
 requires-python = ">=3.6"
 
 [project.optional-dependencies]
-dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
+dev = [
+    "pylint", 
+    "sed", 
+    "tee", 
+    "anybadge", 
+    "isort", 
+    "pytest", 
+    "click", 
+    "black", 
+    "autoflake", 
+    "pre-commit", 
+    "commitizen", 
+    "pytest-cov", 
+    "black", 
+    "bumpver", 
+    "pip-tools"
+]
 
 [project.urls]
 Homepage = "https://github.com/Photonic-Architecture-Laboratories/siphotonics"
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.1.0"
+version = "1.0.0"
 version_files = [
     "pyproject.toml:version",
     "__version__.py"
