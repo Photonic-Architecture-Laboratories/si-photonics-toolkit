@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "siphotonics"
-version = "0.0.0"
+version = "1.0.0"
 description = "A toolkit to design of silicon photonic components"
 readme = "README.md"
 authors = [{ name = "Aycan Deniz Vit", email = "aycandv@gmail.com" }]
@@ -47,7 +47,7 @@ Homepage = "https://github.com/Photonic-Architecture-Laboratories/siphotonics"
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.0.0"
+version = "1.0.0"
 version_files = [
     "pyproject.toml:version",
     "__version__.py"
