@@ -1,4 +1,1 @@
-include README.md
-include siphotonics/data/*.pickle
-include siphotonics/data/*.gz
-include docs/*.txt
+include siphotonics/data/*

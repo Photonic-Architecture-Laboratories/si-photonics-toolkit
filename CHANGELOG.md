@@ -1,22 +1,10 @@
-## 1.0.0 (2022-12-16)
-
-## 0.0.0 (2022-12-16)
+## 0.1.0 (2022-12-16)
 
 ### Feat
 
-- add mkdocs jupyter for notebook visualization
-- add jax in requirements
-- add spline effective
-- add spline effective
-- add new effective index functions
+- **manifest**: add data files to manifest
 
-### Fix
-
-- remove redundant imports
-- remove redundant data load
-- update function calls for group index
-- resolve cyclic import issue
-- update setup stage in gitlab-ci
+## 0.0.0 (2022-12-16)
 
 ### Refactor
 
@@ -47,3 +35,19 @@
 - reformat trax neff
 - update version field in setup.py
 - remove unused libraries
+
+### Feat
+
+- add mkdocs jupyter for notebook visualization
+- add jax in requirements
+- add spline effective
+- add spline effective
+- add new effective index functions
+
+### Fix
+
+- remove redundant imports
+- remove redundant data load
+- update function calls for group index
+- resolve cyclic import issue
+- update setup stage in gitlab-ci
