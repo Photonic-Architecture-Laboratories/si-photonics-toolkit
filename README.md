@@ -1,11 +1,14 @@
 [![build](https://github.com/Photonic-Architecture-Laboratories/siphotonics/actions/workflows/makefile.yml/badge.svg)](https://github.com/Photonic-Architecture-Laboratories/siphotonics/actions/workflows/makefile.yml)
 [![Documentation Status](https://readthedocs.org/projects/siphotonics/badge/?version=latest)](https://siphotonics.readthedocs.io/en/latest/?badge=latest)
 
-# Getting Started
 
-**SiPhotonics** is a package providing fundamental waveguide and material properties to aid in the design of silicon photonic components on SOI platforms with high accuracy and extremely fast runtime.
+# Siphotonics
 
-## Installation
+## Getting Started
+
+**SiPhotonics** is a toolkit providing fundamental waveguide and material properties to aid in the design of silicon photonic components on SOI platforms with high accuracy and extremely fast runtime. See the [documentation](siphotonics.readthedocs.io) for tutorials and API reference.
+
+## Installation
 
 ### Pip
 
@@ -29,7 +32,7 @@ The package requires the following packages to be installed:
 -   [Jax](https://jax.readthedocs.io/en/latest/index.html)
 -   [Trax](https://trax-ml.readthedocs.io/en/latest/)
 
-## BibTeX
+## Citing SiPhotonics Toolkit
 
     @software{siphotonics2022github,
         url = {https://github.com/Photonic-Architecture-Laboratories/siphotonics},
