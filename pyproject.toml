@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "siphotonics"
-version = "1.0.0"
+version = "0.0.0"
 description = "A toolkit to design of silicon photonic components"
 readme = "README.md"
 authors = [{ name = "Aycan Deniz Vit", email = "aycandv@gmail.com" }]
