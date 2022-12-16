@@ -31,8 +31,8 @@ The package requires the following packages to be installed:
 ## BibTeX
 
     @software{siphotonics2022github,
-        url = {https://arxiv.org/abs/xxx},
-        author = {xxx, xxx},
+        url = {https://github.com/Photonic-Architecture-Laboratories/siphotonics},
+        author = {Aycan Deniz Vit, Emir Salih Mağden},
         title = {SiPhotonics: A Python package for the design of silicon photonic components},
         year = {2022},  
         version = {0.1.0},
