@@ -8,6 +8,7 @@ click
 black
 autoflake
 pre-commit
+commitizen
 pytest-cov
 jax
 trax
