@@ -1,3 +1,16 @@
+## 1.2.0 (2022-12-16)
+
+### Feat
+
+- **readme**: update readme
+
+## 1.1.0 (2022-12-16)
+
+### Feat
+
+- **readme**: add dev package installation guide
+- **readme**: change name of the project
+
 ## 1.0.0 (2022-12-16)
 
 ### Feat
