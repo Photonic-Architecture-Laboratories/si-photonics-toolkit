@@ -1,0 +1,9 @@
+mkdocs
+mkdocs-material
+mkdocstrings-python
+mkdocs-git-revision-date-localized-plugin
+mkdocs-git-authors-plugin
+mkdocs-minify-plugin
+mkdocs-awesome-pages-plugin
+mkdocs-jupyter
+mkdocs-with-pdf

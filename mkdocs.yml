@@ -1,0 +1,87 @@
+site_name: SiPhotonics
+copyright: Copyright &copy; 2022 Aycan Deniz Vit
+repo_url: https://github.com/Photonic-Architecture-Laboratories/siphotonics
+repo_name: siphotonics
+
+nav:
+  - Getting Started: index.md
+  - Examples: 
+    - Effective Index: 1- Effective Index.ipynb
+    - Group Index: 3- Group Index.ipynb
+    - Permittivity: 2- Permittivity.ipynb
+  - API Documentation: api.md
+
+plugins:
+  - search
+  - pdf-export:
+      verbose: true
+      media_type: print
+      enabled_if_env: ENABLE_PDF_EXPORT
+      combined: true
+  - mkdocstrings:
+      handlers:
+          python:
+            options:
+              show_root_heading: true
+              show_root_full_path: true
+              show_object_full_path: true
+              show_submodules: true
+              show_category_heading: false
+              heading_level: 2
+              docstring_style: google
+              docstring_section_style: table
+              annotations_path: source
+              show_signature_annotations: false
+  - git-revision-date-localized:
+      type: timeago
+      custom_format: "%d. %B %Y"
+      timezone: Europe/Amsterdam
+      locale: en
+      fallback_to_build_date: false
+      enable_creation_date: true
+      enabled: true
+  - git-authors:
+      show_contribution: true
+      show_line_count: true
+      show_email_address: true
+      count_empty_lines: true
+      fallback_to_empty: false
+      sort_authors_by: name
+      authorship_threshold_percent: 10
+      enabled: true
+  - mkdocs-jupyter:
+      execute_notebooks: false
+      include: ["*.ipynb"]
+
+
+theme:
+  name: 'material'
+  icon:
+    logo: material/flare
+    repo: fontawesome/brands/git-alt
+  font:
+    text: Ubuntu
+  features:
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.top
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+extra:
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:aycandv@gmail.com
+    - icon: fontawesome/brands/github 
+      link: https://github.com/aycandv
+
