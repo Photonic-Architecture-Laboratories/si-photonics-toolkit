@@ -48,7 +48,11 @@ Homepage = "https://github.com/Photonic-Architecture-Laboratories/siphotonics"
 [tool.commitizen]
 name = "cz_conventional_commits"
 version = "1.1.0"
+tag_format = "$version"
 version_files = [
+    "siphotonics.__version__.py",
     "pyproject.toml:version",
-    "__version__.py"
 ]
+
+[tool.setuptools.dynamic]
+version = {attr = "siphotonics.__version__.version"}
