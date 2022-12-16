@@ -6,7 +6,7 @@
 
 ## Getting Started
 
-**SiPhotonics** is a toolkit providing fundamental waveguide and material properties to aid in the design of silicon photonic components on SOI platforms with high accuracy and extremely fast runtime. See the [documentation](https://siphotonics.readthedocs.io/en/latest/) for tutorials and API reference.
+**Si-Photonics** is a toolkit providing fundamental waveguide and material properties to aid in the design of silicon photonic components on SOI platforms with high accuracy and extremely fast runtime. See the [documentation](https://siphotonics.readthedocs.io/en/latest/) for tutorials and API reference.
 
 ## Installation
 

@@ -1,3 +1,9 @@
+## 1.0.0 (2022-12-16)
+
+### Feat
+
+- merge master into develop
+
 ## 0.1.0 (2022-12-16)
 
 ### Feat
