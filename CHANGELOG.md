@@ -1,3 +1,13 @@
+## 1.3.0 (2022-12-17)
+
+### Fix
+
+- resolve conflict
+
+### Feat
+
+- add dynamic version update
+
 ## 1.2.0 (2022-12-16)
 
 ### Feat
