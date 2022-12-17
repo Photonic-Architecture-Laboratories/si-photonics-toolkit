@@ -2,6 +2,8 @@
 
 ### Fix
 
+- **version**: rewind version
+- **version**: fix version build error
 - resolve conflict
 
 ### Feat
