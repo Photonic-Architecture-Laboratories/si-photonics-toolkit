@@ -55,4 +55,4 @@ version_files = [
 ]
 
 [tool.setuptools.dynamic]
-version = {attr = "siphotonics.__version__:version", file = "siphotonics/__version__.py"}
+version = {file = "siphotonics/__version__.py"}
