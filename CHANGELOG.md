@@ -1,3 +1,9 @@
+## 1.3.1 (2022-12-17)
+
+### Fix
+
+- **version**: fix version build errors
+
 ## 1.3.0 (2022-12-17)
 
 ### Feat
