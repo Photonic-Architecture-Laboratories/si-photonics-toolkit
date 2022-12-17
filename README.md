@@ -1,11 +1,12 @@
-[![build](https://github.com/Photonic-Architecture-Laboratories/siphotonics/actions/workflows/makefile.yml/badge.svg)](https://github.com/Photonic-Architecture-Laboratories/siphotonics/actions/workflows/makefile.yml)
-[![Documentation Status](https://readthedocs.org/projects/siphotonics/badge/?version=latest)](https://siphotonics.readthedocs.io/en/latest/?badge=latest)
+[![build](https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit/actions/workflows/makefile.yml/badge.svg)](https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit/actions/workflows/makefile.yml)
+[![Documentation Status](https://readthedocs.org/projects/sipkit/badge/?version=latest)](https://sipkit.readthedocs.io/en/latest/?badge=latest)
 
-# Siphotonics
+
+# SiPhotonics Toolkit
 
 ## Getting Started
 
-**Si-Photonics** is a toolkit providing fundamental waveguide and material properties to aid in the design of silicon photonic components on SOI platforms with high accuracy and extremely fast runtime. See the [documentation](https://siphotonics.readthedocs.io/en/latest/) for tutorials and API reference.
+**SiPhotonics Toolkit** is a toolkit providing fundamental waveguide and material properties to aid in the design of silicon photonic components on SOI platforms with high accuracy and extremely fast runtime. See the [documentation](https://sipkit.readthedocs.io/en/latest/) for tutorials and API reference.
 
 ## Installation
 
@@ -19,7 +20,7 @@ The package can be installed via pip:
 
 Alternatively, the package can be built from source by cloning the repository and running the setup script:
 
-    git clone https://github.com/Photonic-Architecture-Laboratories/siphotonics.git
+    git clone https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit.git
     cd siphotonics
     python setup.py install
 
@@ -33,10 +34,9 @@ The package requires the following packages to be installed:
 
 ## Citing SiPhotonics Toolkit
 
-    @software{siphotonics2022github,
-        url = {https://github.com/Photonic-Architecture-Laboratories/siphotonics},
+    @software{si-photonics-toolkit2022github,
+        url = {https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit},
         author = {Aycan Deniz Vit, Emir Salih Mağden},
-        title = {SiPhotonics: A Python package for the design of silicon photonic components},
-        year = {2022},  
-        version = {0.1.0},
+        title = {SiPhotonics Toolkit: A toolkit for the design of silicon photonic components},
+        year = {2022},
     }
