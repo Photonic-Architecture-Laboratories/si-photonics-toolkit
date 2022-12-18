@@ -14,18 +14,18 @@
 
 The package can be installed via pip:
 
-    pip install siphotonics
+    pip install sipkit
 
 You can install siphotonics with additional packages for developers:
 
-    pip install siphotonics[dev]
+    pip install sipkit[dev]
 
 ### Build from source
 
 Alternatively, the package can be built from source by cloning the repository and running the setup script:
 
     git clone https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit.git
-    cd siphotonics
+    cd si-photonics-toolkit
     python setup.py install
 
 ## Dependencies
