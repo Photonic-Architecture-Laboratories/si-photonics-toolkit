@@ -3,7 +3,7 @@ from jax.scipy import ndimage
 from trax import fastmath
 
 
-from siphotonics.read_data import (
+from sipkit.read_data import (
     effective_index_te0,
     effective_index_te1,
     effective_index_te2,

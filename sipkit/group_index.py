@@ -1,4 +1,4 @@
-from siphotonics.effective_index import neff, wav_max, wav_min, width_max, width_min
+from sipkit.effective_index import neff, wav_max, wav_min, width_max, width_min
 
 
 def group_index(width, wavelength):

@@ -1,6 +1,6 @@
 import numpy as np
 
-from siphotonics.util import _read_effective_index
+from sipkit.util import _read_effective_index
 
 neff_data, width_data, wav_data = _read_effective_index(
     "neff_fitted_Si_fitted_SiO2_width_240_5_700_wav_1200_0p1_1700.csv"
