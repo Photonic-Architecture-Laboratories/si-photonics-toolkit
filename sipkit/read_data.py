@@ -1,3 +1,4 @@
+from __future__ import annotations
 import numpy as np
 
 from sipkit.util import _read_effective_index

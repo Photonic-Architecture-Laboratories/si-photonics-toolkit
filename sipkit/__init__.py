@@ -1,4 +1,3 @@
-from __future__ import annotations
 from sipkit import __version__
 
 from sipkit import effective_index

@@ -1,3 +1,4 @@
+from __future__ import annotations
 from jax import jit
 from jax.scipy import ndimage
 from trax import fastmath
