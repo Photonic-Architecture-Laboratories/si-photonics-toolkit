@@ -16,6 +16,10 @@ The package can be installed via pip:
 
     pip install siphotonics
 
+You can install siphotonics with additional packages for developers:
+
+    pip install siphotonics[dev]
+
 ### Build from source
 
 Alternatively, the package can be built from source by cloning the repository and running the setup script:
