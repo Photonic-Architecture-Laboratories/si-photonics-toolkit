@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "sipkit"
 dynamic = ["version"]
-description = "A toolkit to design of silicon photonic components"
+description = "A toolkit to rapidly lookup parameters for the design of silicon photonic components with automatic differentiation capability"
 readme = "README.md"
 authors = [{ name = "Aycan Deniz Vit", email = "aycandv@gmail.com" }]
 license = { file = "LICENSE" }

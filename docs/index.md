@@ -2,11 +2,11 @@
 [![Documentation Status](https://readthedocs.org/projects/sipkit/badge/?version=latest)](https://sipkit.readthedocs.io/en/latest/?badge=latest)
 
 
-# SiPhotonics Toolkit
+# Silicon Photonics Toolkit
 
 ## Getting Started
 
-**SiPhotonics Toolkit** is a toolkit providing fundamental waveguide and material properties to aid in the design of silicon photonic components on SOI platforms with high accuracy and extremely fast runtime. See the [documentation](https://sipkit.readthedocs.io/en/latest/) for tutorials and API reference.
+**Silicon Photonics Toolkit** is a toolkit providing fundamental waveguide and material properties to aid in the design of silicon photonic components on SOI platforms with high accuracy and extremely fast runtime. See the [documentation](https://sipkit.readthedocs.io/en/latest/) for tutorials and API reference.
 
 ## Installation
 
@@ -38,9 +38,10 @@ The package requires the following packages to be installed:
 
 ## Citing SiPhotonics Toolkit
 
-    @software{si-photonics-toolkit2022github,
+    @software{silicon-photonics-toolkit2022github,
         url = {https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit},
         author = {Aycan Deniz Vit, Emir Salih Mağden},
-        title = {SiPhotonics Toolkit: A toolkit for the design of silicon photonic components},
+        title = {Silicon Photonics Toolkit},
+        description = {A toolkit to rapidly lookup parameters for the design of silicon photonic components with automatic differentiation capability.},
         year = {2022},
     }
