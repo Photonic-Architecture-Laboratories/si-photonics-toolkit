@@ -28,7 +28,7 @@ Alternatively, the package can be built from source by cloning the repository an
     cd si-photonics-toolkit
     python setup.py install
 
-## Dependencies
+## Dependencies
 
 The package requires the following packages to be installed:
 
