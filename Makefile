@@ -1,4 +1,4 @@
-TARGET_FILES=siphotonics/*.py tests/*.py setup.py
+TARGET_FILES=sipkit/*.py tests/*.py setup.py
 
 install:
 	pip install --upgrade pip && \
@@ -17,7 +17,7 @@ lint:
 		--max-line-length=120  --exit-zero --output-format=text \
 			$(TARGET_FILES)
 test:
-	python -m pytest -vv --cov=siphotonics --disable-warnings
+	python -m pytest -vv --cov=sipkit --disable-warnings
 
 ci: install lint test
 

@@ -1,9 +1,9 @@
 # API Reference
 
-:::siphotonics.effective_index
+:::sipkit.effective_index
 
-:::siphotonics.permittivity
+:::sipkit.permittivity
 
-:::siphotonics.util
+:::sipkit.util
 
 by {{ git_page_authors }}

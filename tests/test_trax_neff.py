@@ -1,4 +1,4 @@
-import siphotonics as sip
+import sipkit as sip
 
 
 def test_neff():
