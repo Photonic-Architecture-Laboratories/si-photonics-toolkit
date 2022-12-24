@@ -51,8 +51,8 @@ version = "1.3.2"
 tag_format = "$version"
 version_files = [
     "pyproject.toml:version",
-    "siphotonics/__version__.py:version",
+    "sipkit/__version__.py:version",
 ]
 
 [tool.setuptools.dynamic]
-version = { attr = "siphotonics.__version__.version"}
+version = { attr = "sipkit.__version__.version"}
