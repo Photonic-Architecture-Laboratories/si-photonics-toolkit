@@ -1,3 +1,15 @@
+## 1.3.3 (2022-12-24)
+
+### Refactor
+
+- rename project and package name in readings and docs
+- update project name in makefile
+- add annotations to all src files
+- add annotations for type check
+- rename installation directory to sipkit
+- rename project name to sipkit
+- add new name of repo to readme
+
 ## 1.3.2 (2022-12-17)
 
 ### Fix
