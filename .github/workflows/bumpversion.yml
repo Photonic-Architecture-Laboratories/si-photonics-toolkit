@@ -21,15 +21,15 @@ jobs:
         with:
           github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           changelog_increment_filename: body.md
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           body_path: "body.md"
           tag_name: ${{ env.REVISION }}
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       - run: python3 -m pip install --upgrade build && python3 -m build
