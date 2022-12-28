@@ -26,7 +26,7 @@ Alternatively, the package can be built from source by cloning the repository an
 
     git clone https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit.git
     cd si-photonics-toolkit
-    python setup.py install
+    pip install -e .
 
 ## Dependencies
 
@@ -34,7 +34,6 @@ The package requires the following packages to be installed:
 
 -   [NumPy](https://numpy.org/)
 -   [Jax](https://jax.readthedocs.io/en/latest/index.html)
--   [Trax](https://trax-ml.readthedocs.io/en/latest/)
 
 ## Citing SiPhotonics Toolkit
 
