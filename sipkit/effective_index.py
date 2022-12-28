@@ -1,7 +1,6 @@
 from __future__ import annotations
 from jax import jit
 from jax.scipy import ndimage
-from trax import fastmath
 
 
 from sipkit.read_data import (
@@ -166,26 +165,3 @@ def neff_te2(width: float, wavelength: float) -> float | list[float]:
         ],
         order=1,
     )
-
-
-@jit
-def grad_neff(width: float, wavelength: float) -> tuple[float, float]:
-    """
-    Gets derivatives of Effective Index at funcdamental mode with respect to waveguide width and
-    wavelength.
-
-    Args:
-        width (float): Waveguide width in microns. (0.25 - 0.7)
-        wavelength (float): Wavelength in microns. (1.2 - 1.7)
-
-    Returns:
-        Tuple of derivatives of Effective Index at fundamental mode with respect to waveguide width and wavelength.
-
-    Examples:
-        >>> grad_neff(0.5, 1.5)
-        (0.0, 0.0)
-
-        >>> grad_neff([0.5, 0.6], [1.5, 1.6])
-        (array([0., 0.]), array([0., 0.]))
-    """
-    return fastmath.grad(neff, (0, 1))(width, wavelength)
