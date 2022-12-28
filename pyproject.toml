@@ -18,6 +18,7 @@ classifiers = [
 keywords = ["photonics", "nanophotonics", "silicon photonics"]
 dependencies = [
     "jax",
+    "jaxlib",
     'tomli; python_version < "3.11"',
 ]
 requires-python = ">=3.6"
