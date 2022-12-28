@@ -50,8 +50,7 @@ plugins:
       authorship_threshold_percent: 10
       enabled: true
   - mkdocs-jupyter:
-      execute_notebooks: false
-      include: ["*.ipynb"]
+      execute: true
 
 
 theme:
