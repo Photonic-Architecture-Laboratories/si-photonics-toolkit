@@ -13,4 +13,4 @@ mkdocs-with-pdf
 mkdocstrings
 mkdocstrings-python
 ipykernel
-sipkit
+.
