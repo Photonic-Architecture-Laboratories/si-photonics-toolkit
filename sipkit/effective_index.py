@@ -35,13 +35,33 @@ def neff(width: float, wavelength: float) -> float | list[float]:
 
     Examples:
         >>> neff(0.5, 1.5)
-        2.0
-
-        >>> neff([0.5, 0.6], [1.5, 1.6])
-        [2.0, 2.1]
+        array(2.)
 
         >>> neff(0.5, [1.5, 1.6])
-        [2.0, 2.1]
+        array([2. , 2.1])
+
+        >>> neff([0.5, 0.6], 1.5)
+        array([2. , 1.9])
+
+        >>> neff([0.5, 0.6], [1.5, 1.6])
+        array([[2. , 2.1],
+
+        >>> neff(0.5, [[1.5, 1.6], [1.7, 1.8]])
+        array([[2. , 2.1],
+               [1.9, 2. ]])
+
+        >>> neff([[0.5, 0.6], [0.7, 0.8]], 1.5)
+        array([[2. , 1.9],
+               [1.8, 1.7]])
+
+        >>> waveguide_width = jnp.array([0.5, 0.6])
+        >>> wavelength = np.array([1.5, 1.6, 1.7])
+        >>> waveguide_width, wavelength = np.meshgrid(waveguide_width, wavelength)
+        >>> neff(waveguide_width, wavelength)
+        array([[2. , 2.1],
+               [1.9, 2. ],
+               [1.8, 1.9]])
+
     """
     return ndimage.map_coordinates(
         neff_data,
