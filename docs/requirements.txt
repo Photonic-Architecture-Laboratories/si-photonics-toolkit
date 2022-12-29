@@ -12,3 +12,5 @@ mkdocs-pdf-export-plugin
 mkdocs-with-pdf
 mkdocstrings
 mkdocstrings-python
+ipykernel
+.
