@@ -1,3 +1,13 @@
+## 1.4.0 (2022-12-29)
+
+### Feat
+
+- **effective_index**: remove `grad_neff` function
+
+### Fix
+
+- **pyproject**: add jaxlib to requirements
+
 ## 1.3.4 (2022-12-24)
 
 ### Refactor
