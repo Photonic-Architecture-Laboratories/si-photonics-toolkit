@@ -1,7 +1,7 @@
-site_name: SiPhotonics
-copyright: Copyright &copy; 2022 Aycan Deniz Vit
-repo_url: https://github.com/Photonic-Architecture-Laboratories/siphotonics
-repo_name: siphotonics
+site_name: Silicon Photonics Toolkit
+copyright: Copyright &copy; 2022 PAL
+repo_url: https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit
+repo_name: si-photonics-toolkit
 
 nav:
   - Getting Started: index.md
@@ -13,6 +13,7 @@ nav:
 
 plugins:
   - search
+  - external-markdown
   - pdf-export:
       verbose: true
       media_type: print
@@ -50,8 +51,7 @@ plugins:
       authorship_threshold_percent: 10
       enabled: true
   - mkdocs-jupyter:
-      execute_notebooks: false
-      include: ["*.ipynb"]
+      execute: true
 
 
 theme:

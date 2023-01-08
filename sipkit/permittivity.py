@@ -1,7 +1,8 @@
+from __future__ import annotations
 import os
 import pickle
 
-from siphotonics.effective_index import wav_max, wav_min
+from sipkit.effective_index import wav_max, wav_min
 
 user_dir = os.getcwd()
 os.chdir(os.path.join(os.path.dirname(__file__), "data"))
