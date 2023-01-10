@@ -13,6 +13,7 @@ nav:
 
 plugins:
   - search
+  - external-markdown
   - pdf-export:
       verbose: true
       media_type: print

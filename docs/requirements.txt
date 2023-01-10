@@ -4,6 +4,7 @@ mkdocs-autorefs
 mkdocs-awesome-pages-plugin
 mkdocs-git-authors-plugin
 mkdocs-git-revision-date-localized-plugin
+mkdocs-embed-external-markdown
 mkdocs-jupyter
 mkdocs-material
 mkdocs-material-extensions
