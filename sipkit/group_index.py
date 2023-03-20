@@ -1,4 +1,5 @@
 from __future__ import annotations
+from trax.fastmath import grad
 from sipkit.effective_index import neff, wav_max, wav_min, width_max, width_min
 
 
