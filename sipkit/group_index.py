@@ -6,8 +6,7 @@ from jax import grad
 from sipkit.effective_index import neff
 
 
-# returns array of single value
-def group_index(width: float, wavelength: float) -> jaxlib.xla_extension.DeviceArray | jaxlib.xla_extension.Array:
+def ng(width: float, wavelength: float) -> jaxlib.xla_extension.DeviceArray | jaxlib.xla_extension.Array:
     """
     Group Index of light at a specified wavelength in a waveguide with a specified width.
 
