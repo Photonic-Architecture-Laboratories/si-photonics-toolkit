@@ -1,3 +1,14 @@
+## 1.5.0 (2023-03-24)
+
+### Feat
+
+- **group_index**: add new group index function to be jax compatible
+
+### Refactor
+
+- **group_index**: update function name group_index to ng
+- **group_index**: add grad function from trax fastmath
+
 ## 1.4.1 (2023-01-12)
 
 ### Fix
