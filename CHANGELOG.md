@@ -1,3 +1,9 @@
+## 1.4.1 (2023-01-12)
+
+### Fix
+
+- update input arguments to group index func
+
 ## 1.4.0 (2022-12-29)
 
 ### Feat
