@@ -5,7 +5,7 @@ repo_name: si-photonics-toolkit
 
 nav:
   - Getting Started: index.md
-  - Examples: 
+  - Examples:
     - Effective Index: 1- Effective Index.ipynb
     - Group Index: 3- Group Index.ipynb
     - Permittivity: 2- Permittivity.ipynb
@@ -55,7 +55,7 @@ plugins:
 
 
 theme:
-  name: 'material'
+  name: 'readthedocs'
   icon:
     logo: material/flare
     repo: fontawesome/brands/git-alt
@@ -82,6 +82,5 @@ extra:
   social:
     - icon: fontawesome/solid/paper-plane
       link: mailto:aycandv@gmail.com
-    - icon: fontawesome/brands/github 
+    - icon: fontawesome/brands/github
       link: https://github.com/aycandv
-

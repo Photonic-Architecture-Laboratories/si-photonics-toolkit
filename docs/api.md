@@ -4,6 +4,6 @@
 
 :::sipkit.permittivity
 
-:::sipkit.util
+:::sipkit.group_index
 
 by {{ git_page_authors }}
