@@ -30,7 +30,7 @@ plugins:
               show_category_heading: false
               heading_level: 2
               docstring_style: google
-              docstring_section_style: table
+              docstring_section_style: sphinx
               annotations_path: source
               show_signature_annotations: false
   - git-revision-date-localized:
