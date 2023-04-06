@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="writer-html5" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="None" name="description"/>
+<link href="img/favicon.ico" rel="shortcut icon"/>
+<title>Silicon Photonics Toolkit</title>
+<link href="css/theme.css" rel="stylesheet"/>
+<link href="css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" rel="stylesheet"/>
+<link href="css/timeago.css" rel="stylesheet"/>
+<link href="assets/_mkdocstrings.css" rel="stylesheet"/>
+<script>
+        // Current page data
+        var mkdocs_page_name = "Getting Started";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+<script defer="" src="js/jquery-3.6.0.min.js"></script>
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link href="pdf/combined.pdf" rel="alternate" title="PDF Export" type="application/pdf"/></head>
+<body class="wy-body-for-nav" role="document">
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="."> Silicon Photonics Toolkit
+        </a><div role="search">
+<form action="./search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
+</div>
+</div>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal current" href=".">Getting Started</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#pip">Pip</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#build-from-source">Build from source</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#citing-siphotonics-toolkit">Citing SiPhotonics Toolkit</a>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1-%20Effective%20Index/">Effective Index</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3-%20Group%20Index/">Group Index</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2-%20Permittivity/">Dielectric Constant of Silicon and Silicon Dioxide</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/">API Documentation</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href=".">Silicon Photonics Toolkit</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a alt="Docs" class="icon icon-home" href="."></a> »</li>
+<li>Getting Started</li>
+<li class="wy-breadcrumbs-aside">
+<a href="https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit/edit/master/docs/index.md">Edit on si-photonics-toolkit</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<!-- include and display another md file here -->
+<p><a href="https://sipkit.readthedocs.io/en/latest/?badge=latest"><img alt="Documentation Status" src="https://readthedocs.org/projects/sipkit/badge/?version=latest"/></a>
+<a href="https://badge.fury.io/py/sipkit"><img alt="PyPI version" src="https://badge.fury.io/py/sipkit.svg"/></a></p>
+<h1 id="silicon-photonics-toolkit">Silicon Photonics Toolkit</h1>
+<h2 id="getting-started">Getting Started</h2>
+<p><strong>Silicon Photonics Toolkit</strong> is a toolkit providing fundamental waveguide and material properties to aid in the design of silicon photonic components on SOI platforms with high accuracy and extremely fast runtime. See the <a href="https://sipkit.readthedocs.io/en/latest/">documentation</a> for tutorials and API reference.</p>
+<h2 id="installation">Installation</h2>
+<h3 id="pip">Pip</h3>
+<p>The package can be installed via pip:</p>
+<pre><code>pip install sipkit
+</code></pre>
+<p>You can install siphotonics with additional packages for developers:</p>
+<pre><code>pip install sipkit[dev]
+</code></pre>
+<h3 id="build-from-source">Build from source</h3>
+<p>Alternatively, the package can be built from source by cloning the repository and running the setup script:</p>
+<pre><code>git clone https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit.git
+cd si-photonics-toolkit
+pip install -e .
+</code></pre>
+<h2 id="dependencies">Dependencies</h2>
+<p>The package requires the following packages to be installed:</p>
+<ul>
+<li><a href="https://numpy.org/">NumPy</a></li>
+<li><a href="https://jax.readthedocs.io/en/latest/index.html">Jax</a></li>
+</ul>
+<h2 id="citing-siphotonics-toolkit">Citing SiPhotonics Toolkit</h2>
+<pre><code>@software{silicon-photonics-toolkit2022github,
+    url = {https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit},
+    author = {Aycan Deniz Vit, Emir Salih Mağden},
+    title = {Silicon Photonics Toolkit},
+    description = {A toolkit to rapidly lookup parameters for the design of silicon photonic components with automatic differentiation capability.},
+    year = {2022},
+}
+</code></pre>
+</div>
+</div><footer>
+<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-right" href="1-%20Effective%20Index/" title="Effective Index">Next <span class="icon icon-circle-arrow-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+<p>Copyright © 2022 PAL</p>
+</div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+</div>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span><a href="1-%20Effective%20Index/" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script>var base_url = '.';</script>
+<script defer="" src="js/theme_extra.js"></script>
+<script defer="" src="js/theme.js"></script>
+<script defer="" src="js/timeago.min.js"></script>
+<script defer="" src="js/timeago_mkdocs_material.js"></script>
+<script defer="" src="search/main.js"></script>
+<script defer="">
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+</body>
+</html>
+<!--
+MkDocs version : 1.4.2
+Build Date UTC : 2023-04-06 13:26:27.398996+00:00
+-->
