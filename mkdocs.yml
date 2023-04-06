@@ -54,7 +54,7 @@ plugins:
 
 
 theme:
-  name: 'readthedocs'
+  name: 'material'
   icon:
     logo: material/flare
     repo: fontawesome/brands/git-alt
