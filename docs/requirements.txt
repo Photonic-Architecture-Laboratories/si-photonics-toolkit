@@ -15,4 +15,5 @@ mkdocstrings
 mkdocstrings-python
 ipykernel
 matplotlib
+weasyprint==52.5
 .
