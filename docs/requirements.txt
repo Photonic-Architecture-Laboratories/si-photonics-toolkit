@@ -3,7 +3,7 @@ sphinx
 nbsphinx
 myst_parser
 rst2pdf
-sphinx-rtd-themes
+
 ipykernel
 matplotlib
 .
