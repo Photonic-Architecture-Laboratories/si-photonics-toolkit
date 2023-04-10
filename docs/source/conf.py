@@ -7,13 +7,14 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 import os
 import sys
+import sipkit
 
 sys.path.insert(0, os.path.abspath("../../sipkit"))
 
 project = "sipkit"
 copyright = "2023, Aycan Deniz Vit"
 author = "Aycan Deniz Vit"
-release = "0.0.1"
+release = sipkit.__version__.version
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
