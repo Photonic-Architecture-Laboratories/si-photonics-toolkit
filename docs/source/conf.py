@@ -54,3 +54,12 @@ pdf_fit_mode = "shrink"
 pdf_compressed = True
 pdf_use_index = True
 pdf_theme = "default"
+
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.txt': 'markdown',
+    '.md': 'markdown',
+}
+
+nbsphinx_allow_errors = True

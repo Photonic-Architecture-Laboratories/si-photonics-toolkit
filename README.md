@@ -42,5 +42,5 @@ The package requires the following packages to be installed:
         author = {Aycan Deniz Vit, Emir Salih Mağden},
         title = {Silicon Photonics Toolkit},
         description = {A toolkit to rapidly lookup parameters for the design of silicon photonic components with automatic differentiation capability.},
-        year = {2022},
-    }
+        year = {2022}
+        }

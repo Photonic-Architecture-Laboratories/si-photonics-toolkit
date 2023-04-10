@@ -7,21 +7,10 @@ Welcome to sipkit's documentation!
 ==================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Getting Started
+   :maxdepth: 5
 
-   "../../README.md"
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Tutorials
-
-   3- Group Index
-
-.. toctree::
-   :maxdepth: 2
-   :caption: API Reference
-
+   landing
+   tutorials
    modules
 
 
