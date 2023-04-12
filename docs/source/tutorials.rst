@@ -1,4 +1,4 @@
-Tutorials
+Usage and Tutorials
 ==========
 
 Usage of Sipkit is very simple. These tutorials will help you kick start your project with Sipkit. 
