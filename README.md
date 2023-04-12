@@ -8,7 +8,7 @@ Various software packages and resources for rapid parameter lookup and calculati
 
 ## Getting Started
 
-**Silicon Photonics Toolkit** is a toolkit providing fundamental waveguide and material properties to aid in the design of silicon photonic components on SOI platforms with high accuracy and extremely fast runtime. See the [documentation](https://sipkit.readthedocs.io/en/latest/) for tutorials and API reference.
+**Silicon Photonics Toolkit** is a toolkit providing fundamental waveguide and material properties to aid in the design of silicon photonic components on silicon-on-insulator platforms with high accuracy and extremely fast runtime. All the waveguide parameters returned by sipkit are calculated for 220-nm-thick strip waveguides on a SOI. See the [documentation](https://sipkit.readthedocs.io/en/latest/) for tutorials and API reference.
 
 ## Installation
 
