@@ -6,4 +6,5 @@ rst2pdf
 
 ipykernel
 matplotlib
+weasyprint==52.5
 .

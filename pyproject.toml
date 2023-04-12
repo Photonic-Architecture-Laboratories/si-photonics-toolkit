@@ -47,7 +47,7 @@ Homepage = "https://github.com/Photonic-Architecture-Laboratories/si-photonics-t
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "1.4.1"
+version = "1.5.0"
 tag_format = "$version"
 version_files = [
     "pyproject.toml:version",
