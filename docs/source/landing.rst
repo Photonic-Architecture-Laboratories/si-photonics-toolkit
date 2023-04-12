@@ -1,4 +1,4 @@
-Getting Started
+Introduction
 ===============
 
 .. include:: ../../README.md
