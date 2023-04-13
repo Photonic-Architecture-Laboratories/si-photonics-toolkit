@@ -46,7 +46,7 @@ html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
 
 pdf_documents = [
-    ("index", "rst2pdf", "Sample rst2pdf doc", "Aycan Deniz Vit, Kazim Gorgulu, Ali Najjar Amiri, Emir Salih Magden"),
+    ("index", "rst2pdf", "Sample rst2pdf doc", "A. D. Vit, K. Gorgulu, A. N. Amiri, E. S. Magden"),
 ]
 pdf_stylesheets = ["sphinx", "kerning", "a4"]
 pdf_break_level = 0
