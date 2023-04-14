@@ -8,12 +8,13 @@
 import os
 import sys
 import sipkit
+from sphinx.util import texescape
 
 sys.path.insert(0, os.path.abspath("../../sipkit"))
 
 project = "sipkit"
 copyright = "2023, Photonic Architecture Laboratories"
-author = "Aycan Deniz Vit"
+author = texescape.escape("Aycan Deniz Vit\\Kazim Gorgulu\\Ali Najjar Amiri\\Emir Salih Magden", "lualatex")
 release = sipkit.__version__.version
 
 # -- General configuration ---------------------------------------------------
