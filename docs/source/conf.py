@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.abspath("../../sipkit"))
 
 project = "sipkit"
 copyright = "2023, Photonic Architecture Laboratories"
-author = "Aycan Deniz Vit, Kazim Gorgulu, Ali Najjar Amiri, Emir Salih Magden"
+author = "A. D. Vit, K. Gorgulu, A. N. Amiri, E. S. Magden"
 release = sipkit.__version__.version
 
 # -- General configuration ---------------------------------------------------
