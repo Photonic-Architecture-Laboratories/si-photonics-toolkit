@@ -14,7 +14,8 @@ sys.path.insert(0, os.path.abspath("../../sipkit"))
 
 project = "sipkit"
 copyright = "2023, Photonic Architecture Laboratories"
-author = "A. D. Vit, K. Gorgulu, A. N. Amiri, E. S. Magden"
+# use texescape to escape latex new line characters
+author = texescape.escape("A. D. Vit\\K. Gorgulu\\A. N. Amiri\\E. S. Magden", "lualatex")
 release = sipkit.__version__.version
 
 # -- General configuration ---------------------------------------------------
