@@ -41,7 +41,7 @@ The package requires the following packages to be installed:
 
     @software{silicon-photonics-toolkit2022github,
         url = {https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit},
-        author = {Aycan Deniz Vit and Kazım Görgülü and Ali Najjar Amiri and Emir Salih Mağden},
+        author = {Aycan Deniz Vit and Kazim Gorgulu and Ali Najjar Amiri and Emir Salih Magden},
         title = {Silicon Photonics Toolkit},
         description = {A toolkit to rapidly lookup parameters for the design of silicon photonic components with automatic differentiation capability.},
         year = {2022},
