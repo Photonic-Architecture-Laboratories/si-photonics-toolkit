@@ -8,12 +8,13 @@
 import os
 import sys
 import sipkit
+from sphinx.util import texescape
 
 sys.path.insert(0, os.path.abspath("../../sipkit"))
 
-project = "sipkit"
+project = "SiPhotonics Toolkit"
 copyright = "2023, Photonic Architecture Laboratories"
-author = "Aycan Deniz Vit, Kazim Gorgulu, Ali Najjar Amiri, Emir Salih Magden"
+author = "A. D. Vit, K. Gorgulu, A. N. Amiri, E. S. Magden"
 release = sipkit.__version__.version
 
 # -- General configuration ---------------------------------------------------
@@ -42,6 +43,8 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
+# texescape.escape('asdasd\\and', 'lualatex')
+
 html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
 
@@ -52,6 +55,8 @@ pdf_stylesheets = ["sphinx", "kerning", "a4"]
 pdf_break_level = 0
 pdf_inline_footnotes = True
 pdf_fit_mode = "shrink"
+# wrap text doesnt fit in the page width and breaks the pdf build process 
+pdf_breakside = "any"
 pdf_compressed = True
 pdf_use_index = True
 pdf_theme = "default"
