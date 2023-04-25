@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 import os
 
 from jax import config
@@ -18,7 +19,7 @@ def _read_effective_index(file_name: str) -> tuple[jnp.ndarray, jnp.ndarray, jnp
     Returns:
         tuple[jnp.ndarray, jnp.ndarray, jnp.ndarray]: Effective index data, width data, wavelength data.
     """
-    
+
     with open(os.path.join(os.path.dirname(__file__), "data", file_name), "r") as _file:
         _lines = _file.readlines()
 

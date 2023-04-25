@@ -1,17 +1,18 @@
 from __future__ import annotations
+
 import os
 import pickle
-import jaxlib
 
+import jaxlib
 from jax import jit
 from jax.scipy.ndimage import map_coordinates
-
 
 user_dir = os.getcwd()
 os.chdir(os.path.join(os.path.dirname(__file__), "data"))
 with open("permittivity.pkl", "rb") as handle:
     perm = pickle.load(handle)
 os.chdir(user_dir)
+
 
 min_wav = perm['wavelengths'].min()
 max_wav = perm['wavelengths'].max()
@@ -21,7 +22,7 @@ wav_size = len(perm['wavelengths'])
 def perm_si(wavelength: float | list[float]) -> jaxlib.xla_extension.DeviceArray | jaxlib.xla_extension.Array:
     """
     Permittivity value of Si at given wavelength.
-    
+
     Args:
         wavelength (float): Wavelength in microns. (1.2 - 1.7) float or list
 
@@ -61,7 +62,7 @@ def perm_oxide(wavelength: float | list[float]) -> jaxlib.xla_extension.DeviceAr
 
         >>> perm_oxide([1.5, 1.6])
         [3.44, 3.44]
-        
+
     """
     return map_coordinates(
         perm['SiO2'],
