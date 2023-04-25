@@ -5,6 +5,7 @@ import pickle
 
 import jaxlib
 from jax import jit
+from jax import numpy as jnp
 from jax.scipy.ndimage import map_coordinates
 
 user_dir = os.getcwd()
@@ -39,7 +40,7 @@ def perm_si(wavelength: float | list[float]) -> jaxlib.xla_extension.DeviceArray
     return map_coordinates(
         perm['Si'],
         [
-            (wavelength - min_wav) * ((wav_size - 1) / (max_wav - min_wav)),
+            (jnp.array(wavelength) - min_wav) * ((wav_size - 1) / (max_wav - min_wav)),
         ],
         order=1,
     )
@@ -67,7 +68,7 @@ def perm_oxide(wavelength: float | list[float]) -> jaxlib.xla_extension.DeviceAr
     return map_coordinates(
         perm['SiO2'],
         [
-            (wavelength - min_wav) * ((wav_size - 1) / (max_wav - min_wav)),
+            (jnp.array(wavelength) - min_wav) * ((wav_size - 1) / (max_wav - min_wav)),
         ],
         order=1,
     )
