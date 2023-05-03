@@ -7,8 +7,10 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 import os
 import sys
-import sipkit
+
 from sphinx.util import texescape
+
+import sipkit
 
 sys.path.insert(0, os.path.abspath("../../sipkit"))
 
@@ -55,7 +57,7 @@ pdf_stylesheets = ["sphinx", "kerning", "a4"]
 pdf_break_level = 0
 pdf_inline_footnotes = True
 pdf_fit_mode = "shrink"
-# wrap text doesnt fit in the page width and breaks the pdf build process 
+# wrap text doesnt fit in the page width and breaks the pdf build process
 pdf_breakside = "any"
 pdf_compressed = True
 pdf_use_index = True
@@ -63,9 +65,9 @@ pdf_theme = "default"
 
 
 source_suffix = {
-    '.rst': 'restructuredtext',
-    '.txt': 'markdown',
-    '.md': 'markdown',
+    ".rst": "restructuredtext",
+    ".txt": "markdown",
+    ".md": "markdown",
 }
 
 nbsphinx_allow_errors = True

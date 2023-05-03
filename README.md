@@ -46,11 +46,11 @@ The package requires the following packages to be installed:
         description = {A toolkit to rapidly lookup parameters for the design of silicon photonic components with automatic differentiation capability.},
         year = {2022},
     }
-    
+
 ## References
 
 1- Dunn, A., Wang, Q., Ganose, A., Dopp, D., Jain, A. Benchmarking Materials Property
-Prediction Methods: The Matbench Test Set and Automatminer Reference Algorithm. npj 
+Prediction Methods: The Matbench Test Set and Automatminer Reference Algorithm. npj
 Computational Materials 6, 138 (2020). https://doi.org/10.1038/s41524-020-00406-3
 
 2- Ong, S. P., Richards, W. D., Jain, A., Hautier, G., Kocher, M., Cholia, S., Gunter, D., Chevrier, V. L., Persson, K. A., & Ceder, G. (2013). Python Materials Genomics (pymatgen): A robust, open-source python library for materials analysis (Version 2022.1.24) [Computer software]. https://doi.org/10.1016/j.commatsci.2012.10.028
