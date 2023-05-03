@@ -1,28 +1,34 @@
 from __future__ import annotations
+
 import os
 import pickle
 
-from sipkit.effective_index import wav_max, wav_min
+import jaxlib
+from jax import jit
+from jax import numpy as jnp
+from jax.scipy.ndimage import map_coordinates
 
 user_dir = os.getcwd()
 os.chdir(os.path.join(os.path.dirname(__file__), "data"))
-with open("permittivity.pickle", "rb") as handle:
+with open("permittivity.pkl", "rb") as handle:
     perm = pickle.load(handle)
 os.chdir(user_dir)
 
 
-def perm_si(wavelength: float | list[float]) -> float | list[float]:
+min_wav = perm['wavelengths'].min()
+max_wav = perm['wavelengths'].max()
+wav_size = len(perm['wavelengths'])
+
+@jit
+def perm_si(wavelength: float | list[float]) -> jaxlib.xla_extension.DeviceArray | jaxlib.xla_extension.Array:
     """
     Permittivity value of Si at given wavelength.
-    
+
     Args:
-        wavelength (float): Wavelength in microns. (1.2 - 1.7) Scalar or list
+        wavelength (float): Wavelength in microns. (1.2 - 1.7) float or list
 
     Returns:
         Permittivity value(s).
-
-    Raises:
-        ValueError: If wavelength is not between 1.2-1.7 microns.
 
     Examples:
         >>> perm_si(1.5)
@@ -30,46 +36,39 @@ def perm_si(wavelength: float | list[float]) -> float | list[float]:
 
         >>> perm_si([1.5, 1.6])
         [11.68, 11.68]
-
-        >>> perm_si(1.8)
-        Traceback (most recent call last):
-            ...
-        ValueError: Wavelength must be between 1.2-1.7 micron
     """
-    if not wav_min <= wavelength <= wav_max:
-        raise ValueError("Wavelength must be between 1.2-1.7 micron")
+    return map_coordinates(
+        perm['Si'],
+        [
+            (jnp.array(wavelength) - min_wav) * ((wav_size - 1) / (max_wav - min_wav)),
+        ],
+        order=1,
+    )
 
-    return perm["Si"](wavelength * 1000)
 
-
-def perm_oxide(wavelength: float | list[float]) -> float | list[float]:
+@jit
+def perm_oxide(wavelength: float | list[float]) -> jaxlib.xla_extension.DeviceArray | jaxlib.xla_extension.Array:
     """
     Permittivity value of SiO2 at given wavelength.
 
     Args:
-        wavelength (float): Wavelength in microns. (1.2 - 1.7) Scalar or list
+        wavelength (float): Wavelength in microns. (1.2 - 1.7) float or list
 
     Returns:
         Permittivity value(s).
 
-    Raises:
-        ValueError: If wavelength is not between 1.2-1.7 microns.
-
     Examples:
-
         >>> perm_oxide(1.5)
         3.44
 
         >>> perm_oxide([1.5, 1.6])
         [3.44, 3.44]
 
-        >>> perm_oxide(1.8)
-        Traceback (most recent call last):
-            ...
-        ValueError: Wavelength must be between 1.2-1.7 micron
-        
     """
-    if not wav_min <= wavelength <= wav_max:
-        raise ValueError("Wavelength must be between 1.2-1.7 micron")
-
-    return perm["SiO2"](wavelength * 1000)
+    return map_coordinates(
+        perm['SiO2'],
+        [
+            (jnp.array(wavelength) - min_wav) * ((wav_size - 1) / (max_wav - min_wav)),
+        ],
+        order=1,
+    )
