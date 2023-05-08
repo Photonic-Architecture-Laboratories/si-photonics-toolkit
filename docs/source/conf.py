@@ -56,10 +56,12 @@ html_theme_options = {
     "use_edit_page_button": True,
     "use_download_button": True,
     "use_fullscreen_button": True,
+    "logo_only": True,
+    "display_version": False,
 }
 
-html_favicon = "_static/favicon.png"
-html_logo = "_static/sipkit-logo.png"
+html_favicon = "favicon.png"
+html_logo = "sipkit-logo.png"
 
 copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
 copybutton_prompt_is_regexp = True
