@@ -33,6 +33,7 @@ extensions = [
     "myst_parser",
     "nbsphinx",
     "rst2pdf.pdfbuilder",
+    "sphinx_copybutton",
 ]
 
 

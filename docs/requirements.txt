@@ -4,7 +4,7 @@ sphinx-book-theme
 nbsphinx
 myst_parser
 rst2pdf
-
+sphinx-copybutton
 ipykernel
 matplotlib
 weasyprint==52.5
