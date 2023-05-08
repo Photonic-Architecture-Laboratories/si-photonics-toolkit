@@ -58,6 +58,9 @@ html_theme_options = {
     "use_fullscreen_button": True,
 }
 
+copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
+copybutton_prompt_is_regexp = True
+
 pdf_documents = [
     ("index", "rst2pdf", "Sample rst2pdf doc", "Aycan Deniz Vit, Kazim Gorgulu, Ali Najjar Amiri, Emir Salih Magden"),
 ]
