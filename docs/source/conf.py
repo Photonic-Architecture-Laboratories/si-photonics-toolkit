@@ -58,6 +58,8 @@ html_theme_options = {
     "use_fullscreen_button": True,
 }
 
+html_favicon = "_static/pal_logo.png"
+
 copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
 copybutton_prompt_is_regexp = True
 
