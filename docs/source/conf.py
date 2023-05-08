@@ -58,7 +58,8 @@ html_theme_options = {
     "use_fullscreen_button": True,
 }
 
-html_favicon = "_static/pal_logo.png"
+html_favicon = "_static/favicon.png"
+html_logo = "_static/sipkit-logo.png"
 
 copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
 copybutton_prompt_is_regexp = True
