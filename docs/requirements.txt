@@ -1,5 +1,6 @@
 Jinja2
 sphinx
+sphinx-book-theme
 nbsphinx
 myst_parser
 rst2pdf

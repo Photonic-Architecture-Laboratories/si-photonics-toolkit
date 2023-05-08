@@ -8,8 +8,6 @@
 import os
 import sys
 
-from sphinx.util import texescape
-
 import sipkit
 
 sys.path.insert(0, os.path.abspath("../../sipkit"))
@@ -47,8 +45,17 @@ exclude_patterns = []
 
 # texescape.escape('asdasd\\and', 'lualatex')
 
-html_theme = "sphinx_rtd_theme"
+html_theme = "sphinx_book_theme"
 html_static_path = ["_static"]
+
+html_theme_options = {
+    "repository_url": "https://https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit",
+    "use_repository_button": True,
+    "use_issues_button": True,
+    "use_edit_page_button": True,
+    "use_download_button": True,
+    "use_fullscreen_button": True,
+}
 
 pdf_documents = [
     ("index", "rst2pdf", "Sample rst2pdf doc", "Aycan Deniz Vit, Kazim Gorgulu, Ali Najjar Amiri, Emir Salih Magden"),
