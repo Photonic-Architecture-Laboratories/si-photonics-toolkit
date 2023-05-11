@@ -15,9 +15,10 @@ with open("permittivity.pkl", "rb") as handle:
 os.chdir(user_dir)
 
 
-min_wav = perm['wavelengths'].min()
-max_wav = perm['wavelengths'].max()
-wav_size = len(perm['wavelengths'])
+min_wav = perm["wavelengths"].min()
+max_wav = perm["wavelengths"].max()
+wav_size = len(perm["wavelengths"])
+
 
 @jit
 def perm_si(wavelength: float | list[float]) -> jaxlib.xla_extension.DeviceArray | jaxlib.xla_extension.Array:
@@ -38,7 +39,7 @@ def perm_si(wavelength: float | list[float]) -> jaxlib.xla_extension.DeviceArray
         [11.68, 11.68]
     """
     return map_coordinates(
-        perm['Si'],
+        perm["Si"],
         [
             (jnp.array(wavelength) - min_wav) * ((wav_size - 1) / (max_wav - min_wav)),
         ],
@@ -66,7 +67,7 @@ def perm_oxide(wavelength: float | list[float]) -> jaxlib.xla_extension.DeviceAr
 
     """
     return map_coordinates(
-        perm['SiO2'],
+        perm["SiO2"],
         [
             (jnp.array(wavelength) - min_wav) * ((wav_size - 1) / (max_wav - min_wav)),
         ],

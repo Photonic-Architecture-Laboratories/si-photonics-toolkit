@@ -3,10 +3,20 @@ from __future__ import annotations
 from jax import jit
 from jax.scipy import ndimage
 
-from sipkit.read_data import (effective_index_te0, effective_index_te1,
-                              effective_index_te2, effective_index_tm0,
-                              effective_index_tm1, neff_data, wav_max, wav_min,
-                              wav_size, width_max, width_min, width_size)
+from sipkit.read_data import (
+    effective_index_te0,
+    effective_index_te1,
+    effective_index_te2,
+    effective_index_tm0,
+    effective_index_tm1,
+    neff_data,
+    wav_max,
+    wav_min,
+    wav_size,
+    width_max,
+    width_min,
+    width_size,
+)
 
 
 @jit
