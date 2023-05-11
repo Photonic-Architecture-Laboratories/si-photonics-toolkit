@@ -1,3 +1,17 @@
+## 1.6.0 (2023-05-11)
+
+### Feat
+
+- cast input arg as a jax numpy array
+- **permittivity**: update the perm function to be jit compatible
+
+### Refactor
+
+- update code with precommit
+- **readme**: The references have been added to the motivation
+- **readme**: update motivation paragraph
+- **permittivity**: add extra blank line
+
 ## 1.5.0 (2023-03-24)
 
 ### Feat
