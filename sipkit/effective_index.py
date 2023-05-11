@@ -1,7 +1,7 @@
 from __future__ import annotations
+
 from jax import jit
 from jax.scipy import ndimage
-
 
 from sipkit.read_data import (
     effective_index_te0,
