@@ -2,7 +2,7 @@ TARGET_FILES=sipkit/*.py tests/*.py setup.py
 
 install:
 	pip install --upgrade pip && \
-		pip install -e .
+		pip install -e .[dev]
 
 format:
 	autoflake --in-place --remove-all-unused-imports \
