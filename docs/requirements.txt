@@ -8,4 +8,6 @@ sphinx-copybutton
 ipykernel
 matplotlib
 weasyprint==52.5
+mkdocs
+mkdocs-material
 .
