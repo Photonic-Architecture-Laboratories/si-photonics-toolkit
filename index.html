@@ -1,168 +1,526 @@
+
 <!DOCTYPE html>
 
-<html class="writer-html5" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="None" name="description"/>
-<link href="img/favicon.ico" rel="shortcut icon"/>
-<title>Silicon Photonics Toolkit</title>
-<link href="css/theme.css" rel="stylesheet"/>
-<link href="css/theme_extra.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" rel="stylesheet"/>
-<link href="css/timeago.css" rel="stylesheet"/>
-<link href="assets/_mkdocstrings.css" rel="stylesheet"/>
-<script>
-        // Current page data
-        var mkdocs_page_name = "Getting Started";
-        var mkdocs_page_input_path = "index.md";
-        var mkdocs_page_url = null;
-      </script>
-<script defer="" src="js/jquery-3.6.0.min.js"></script>
-<!--[if lt IE 9]>
-      <script src="js/html5shiv.min.js"></script>
-    <![endif]-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-<link href="pdf/combined.pdf" rel="alternate" title="PDF Export" type="application/pdf"/></head>
-<body class="wy-body-for-nav" role="document">
-<div class="wy-grid-for-nav">
-<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
-<div class="wy-side-scroll">
-<div class="wy-side-nav-search">
-<a class="icon icon-home" href="."> Silicon Photonics Toolkit
-        </a><div role="search">
-<form action="./search.html" class="wy-form" id="rtd-search-form" method="get">
-<input name="q" placeholder="Search docs" title="Type search term here" type="text"/>
-</form>
-</div>
-</div>
-<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal current" href=".">Getting Started</a>
-<ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
-<ul>
-<li class="toctree-l3"><a class="reference internal" href="#pip">Pip</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#build-from-source">Build from source</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#citing-siphotonics-toolkit">Citing SiPhotonics Toolkit</a>
-</li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Examples</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="1-%20Effective%20Index/">Effective Index</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="3-%20Group%20Index/">Group Index</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="2-%20Permittivity/">Dielectric Constant of Silicon and Silicon Dioxide</a>
-</li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="api/">API Documentation</a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
-<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
-<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
-<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
-<a href=".">Silicon Photonics Toolkit</a>
-</nav>
-<div class="wy-nav-content">
-<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
-<ul class="wy-breadcrumbs">
-<li><a alt="Docs" class="icon icon-home" href="."></a> »</li>
-<li>Getting Started</li>
-<li class="wy-breadcrumbs-aside">
-<a href="https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit/edit/master/docs/index.md">Edit on si-photonics-toolkit</a>
-</li>
-</ul>
-<hr/>
-</div>
-<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
-<div class="section" itemprop="articleBody">
-<!-- include and display another md file here -->
-<p><a href="https://sipkit.readthedocs.io/en/latest/?badge=latest"><img alt="Documentation Status" src="https://readthedocs.org/projects/sipkit/badge/?version=latest"/></a>
-<a href="https://badge.fury.io/py/sipkit"><img alt="PyPI version" src="https://badge.fury.io/py/sipkit.svg"/></a></p>
-<h1 id="silicon-photonics-toolkit">Silicon Photonics Toolkit</h1>
-<h2 id="getting-started">Getting Started</h2>
-<p><strong>Silicon Photonics Toolkit</strong> is a toolkit providing fundamental waveguide and material properties to aid in the design of silicon photonic components on SOI platforms with high accuracy and extremely fast runtime. See the <a href="https://sipkit.readthedocs.io/en/latest/">documentation</a> for tutorials and API reference.</p>
-<h2 id="installation">Installation</h2>
-<h3 id="pip">Pip</h3>
-<p>The package can be installed via pip:</p>
-<pre><code>pip install sipkit
-</code></pre>
-<p>You can install siphotonics with additional packages for developers:</p>
-<pre><code>pip install sipkit[dev]
-</code></pre>
-<h3 id="build-from-source">Build from source</h3>
-<p>Alternatively, the package can be built from source by cloning the repository and running the setup script:</p>
-<pre><code>git clone https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit.git
-cd si-photonics-toolkit
-pip install -e .
-</code></pre>
-<h2 id="dependencies">Dependencies</h2>
-<p>The package requires the following packages to be installed:</p>
-<ul>
-<li><a href="https://numpy.org/">NumPy</a></li>
-<li><a href="https://jax.readthedocs.io/en/latest/index.html">Jax</a></li>
-</ul>
-<h2 id="citing-siphotonics-toolkit">Citing SiPhotonics Toolkit</h2>
-<pre><code>@software{silicon-photonics-toolkit2022github,
-    url = {https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit},
-    author = {Aycan Deniz Vit, Emir Salih Mağden},
-    title = {Silicon Photonics Toolkit},
-    description = {A toolkit to rapidly lookup parameters for the design of silicon photonic components with automatic differentiation capability.},
-    year = {2022},
-}
-</code></pre>
-</div>
-</div><footer>
-<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
-<a class="btn btn-neutral float-right" href="1-%20Effective%20Index/" title="Effective Index">Next <span class="icon icon-circle-arrow-right"></span></a>
-</div>
-<hr/>
-<div role="contentinfo">
-<!-- Copyright etc -->
-<p>Copyright © 2022 PAL</p>
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Welcome to sipkit’s documentation! &#8212; SiPhotonics Toolkit 1.6.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9e8e7855"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=30646c52"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction" href="landing.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">SiPhotonics Toolkit 1.6.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="landing.html">Introduction</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tutorials.html">Usage and Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1-%20Effective%20Index.html">Effective Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2-%20Permittivity.html">Relative Permittivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3-%20Group%20Index.html">Group Index</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">API Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="sipkit.html">sipkit package</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit/edit/main/index.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://https://github.com/Photonic-Architecture-Laboratories/si-photonics-toolkit/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/index.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Welcome to sipkit’s documentation!</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="welcome-to-sipkit-s-documentation">
+<h1>Welcome to sipkit’s documentation!<a class="headerlink" href="#welcome-to-sipkit-s-documentation" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="landing.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="landing.html#silicon-photonics-toolkit">Silicon Photonics Toolkit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="landing.html#getting-started">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="landing.html#installation">Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="landing.html#pip">Pip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="landing.html#build-from-source">Build from source</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="landing.html#dependencies">Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="landing.html#citing-siphotonics-toolkit">Citing SiPhotonics Toolkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="landing.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Usage and Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="1-%20Effective%20Index.html">Effective Index</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1-%20Effective%20Index.html#Effective-Index-of-the-Fundamental-Mode">Effective Index of the Fundamental Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1-%20Effective%20Index.html#Argument-Specifications">Argument Specifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1-%20Effective%20Index.html#Effective-Index-of-Higher-Order-Modes">Effective Index of Higher Order Modes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2-%20Permittivity.html">Relative Permittivity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2-%20Permittivity.html#Relative-Permittivity-of-Silicon-and-Silicon-Dioxide">Relative Permittivity of Silicon and Silicon Dioxide</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3-%20Group%20Index.html">Group Index</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3-%20Group%20Index.html#Group-Index-of-Silicon-Waveguide">Group Index of Silicon Waveguide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3-%20Group%20Index.html#Free-Spectral-Range-(FSR)">Free Spectral Range (FSR)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sipkit.html">sipkit package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sipkit.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sipkit.html#module-sipkit.effective_index">sipkit.effective_index module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sipkit.html#sipkit.effective_index.neff"><code class="docutils literal notranslate"><span class="pre">neff()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sipkit.html#sipkit.effective_index.neff_te0"><code class="docutils literal notranslate"><span class="pre">neff_te0()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sipkit.html#sipkit.effective_index.neff_te1"><code class="docutils literal notranslate"><span class="pre">neff_te1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sipkit.html#sipkit.effective_index.neff_te2"><code class="docutils literal notranslate"><span class="pre">neff_te2()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sipkit.html#sipkit.effective_index.neff_tm0"><code class="docutils literal notranslate"><span class="pre">neff_tm0()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sipkit.html#sipkit.effective_index.neff_tm1"><code class="docutils literal notranslate"><span class="pre">neff_tm1()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sipkit.html#module-sipkit.group_index">sipkit.group_index module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sipkit.html#sipkit.group_index.ng"><code class="docutils literal notranslate"><span class="pre">ng()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sipkit.html#module-sipkit.permittivity">sipkit.permittivity module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sipkit.html#sipkit.permittivity.perm_oxide"><code class="docutils literal notranslate"><span class="pre">perm_oxide()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sipkit.html#sipkit.permittivity.perm_si"><code class="docutils literal notranslate"><span class="pre">perm_si()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </div>
 </section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="landing.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Introduction</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
-<div aria-label="Versions" class="rst-versions" role="note">
-<span class="rst-current-version" data-toggle="rst-current-version">
-<span><a href="1-%20Effective%20Index/" style="color: #fcfcfc">Next »</a></span>
-</span>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By A. D. Vit, K. Gorgulu, A. N. Amiri, E. S. Magden
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023, Photonic Architecture Laboratories.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
-<script>var base_url = '.';</script>
-<script defer="" src="js/theme_extra.js"></script>
-<script defer="" src="js/theme.js"></script>
-<script defer="" src="js/timeago.min.js"></script>
-<script defer="" src="js/timeago_mkdocs_material.js"></script>
-<script defer="" src="search/main.js"></script>
-<script defer="">
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
-</body>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>
-<!--
-MkDocs version : 1.4.2
-Build Date UTC : 2023-04-06 13:26:27.398996+00:00
--->
