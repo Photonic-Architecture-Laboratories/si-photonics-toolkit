@@ -1,3 +1,16 @@
+## 1.6.1 (2025-07-02)
+
+### Fix
+
+- **ci**: use GITHUB_TOKEN for bump version workflow
+- **ci**: explicitly enable commit and push in commitizen action
+- **ci**: final pipeline fixes
+- **ci**: disable commitizen auto-push and handle manually
+- **ci**: configure git remote to use access token properly
+- **ci**: resolve remaining pipeline issues
+- **tests**: resolve syntax error and import issues
+- **ci**: add missing mkdocs dependencies to docs requirements
+
 ## 1.6.0 (2023-05-11)
 
 ### Feat
